@@ -1,5 +1,5 @@
 .footerContainer {
-  border-top: 1px black solid;
+  border-top: 1px #E3E3E3 solid;
   min-height: 30vh;
   padding-bottom: 100px;
 }
@@ -25,6 +25,8 @@
 
 .container {
   width: auto;
+  /*padding-right: .8em;
+  padding-left: .8em;*/
 }
 
 h3 {

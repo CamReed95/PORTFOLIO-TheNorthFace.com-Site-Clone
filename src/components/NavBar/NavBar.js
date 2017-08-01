@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './navbar.css';
 
 export default function NavBar(props) {
   return (
+    <div className="navBarContainer">
     <div className="topNav">
       <ul className="userLinks">
         <li>Find a Store</li>
@@ -10,11 +12,12 @@ export default function NavBar(props) {
         <li className="cartButton">Cart</li>
       </ul>
       <ul className="navLinks">
-          <li>MENS</li>
-          <li>WOMENS</li>
-          <li>BACKPACKS</li>
-          <li>EXPLORE</li>
+          <li><Link to="/mens">MENS</Link></li>
+          <li><Link to="/womens">WOMENS</Link></li>
+          <li><Link to="/backpacks">BACKPACKS</Link></li>
+          <li><Link to="/explore">EXPLORE</Link></li>
       </ul>
+      </div>
     </div>
   )
 }

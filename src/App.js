@@ -1,26 +1,18 @@
 import React, { Component } from 'react';
-// import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Homepage from './components/Homepage/Homepage';
+import Router from './router';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <main>
         <Header />
-        <Homepage />
+          {Router}
         <Footer />
-      </div>
+      </main>
     );
   }
 }
 
 export default App;
-
-//COMPONENT HIERARCHY
-  //App
-    //Header
-      //NavBar
-    //Content
-    //Footer

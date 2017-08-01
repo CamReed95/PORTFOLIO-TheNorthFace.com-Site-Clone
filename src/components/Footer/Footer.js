@@ -6,8 +6,8 @@ export default function Footer(props) {
     <div className="footerContainer">
       <div className="footerContent">
       <div className="linkColumns">
-        <div className="shop">
 
+        <div className="container">
         <h3>SHOP</h3>
         <ul className="footerLinks">
           <li>Gifts</li>
@@ -15,7 +15,6 @@ export default function Footer(props) {
           <li>Mens</li>
           <li>Womens</li>
           <li>Backpacks</li>
-          <li>Expert Personal Shopper</li>
         </ul>
         </div>
 
@@ -35,7 +34,6 @@ export default function Footer(props) {
         <ul className="footerLinks">
           <li>Our Story</li>
           <li>Responsibility</li>
-          <li>Technology & Innovation</li>
           <li>Athlete Team</li>
           <li>Expeditions</li>
           <li>News</li>
@@ -46,7 +44,6 @@ export default function Footer(props) {
         <div className="container">
         <h3>EVENTS</h3>
         <ul className="footerLinks">
-          <li>Peak2Park Virtual Competition</li>
           <li>Endurance Challenge</li>
           <li>Speaker Series</li>
         </ul>

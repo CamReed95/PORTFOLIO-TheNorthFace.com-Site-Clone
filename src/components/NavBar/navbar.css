@@ -1,6 +1,6 @@
 
 .topNav {
-  height: 100%;
+  height: 14.5vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,29 +9,43 @@
 
 .userLinks {
   height: 45%;
-  width: 40%;
+  width: 30%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
-  padding-left: 70%;
+  padding-left: 68%;
   font-size: 13px;
   letter-spacing: 1.56px;
   list-style: none;
 }
 
 .navLinks {
-  /*background-color: lightblue;*/
   width: 55%;
   height: 55%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0 8px;
-  box-sizing: border-box;
+  padding-left: 24px;
+  padding-bottom: 8px;
   letter-spacing: 1.8px;
   font-size: 15px;
+}
 
+.navLinks li {
+  padding-right: 56px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.navLinks a:visited {
+  color: #2A2A2A;
+}
+
+.navLinks a:hover {
+  color: #E72B1E;
 }

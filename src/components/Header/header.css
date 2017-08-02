@@ -76,6 +76,11 @@ body {
 
 @media(min-width: 400px) {
 
+  .freeReturns {
+    font-weight: 900;
+    font-size: 16px;
+  }
+
   .header {
     width: 60vw;
     min-height: 10vh;

@@ -8,7 +8,10 @@ export default function Footer(props) {
       <div className="linkColumns">
 
         <div className="container">
-        <h3>SHOP</h3>
+        <header className="linksHeader">
+          <h3>SHOP</h3>
+          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" />
+        </header>
         <ul className="footerLinks">
           <li>Gifts</li>
           <li>Gift Cards</li>
@@ -19,7 +22,10 @@ export default function Footer(props) {
         </div>
 
         <div className="container">
-        <h3>HELP</h3>
+        <header className="linksHeader">
+          <h3>HELP</h3>
+          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" />
+        </header>
         <ul className="footerLinks">
           <li>FAQ?</li>
           <li>Order Status</li>
@@ -30,7 +36,10 @@ export default function Footer(props) {
         </div>
 
         <div className="container">
-        <h3>ABOUT TNF</h3>
+        <header className="linksHeader">
+          <h3>ABOUT TNF</h3>
+          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" />
+        </header>
         <ul className="footerLinks">
           <li>Our Story</li>
           <li>Responsibility</li>
@@ -42,7 +51,10 @@ export default function Footer(props) {
         </div>
 
         <div className="container">
-        <h3>EVENTS</h3>
+        <header className="linksHeader">
+          <h3>EVENTS</h3>
+          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" />
+        </header>
         <ul className="footerLinks">
           <li>Endurance Challenge</li>
           <li>Speaker Series</li>
@@ -50,7 +62,10 @@ export default function Footer(props) {
         </div>
 
         <div className="container">
-        <h3>EXPLORE</h3>
+        <header className="linksHeader">
+          <h3>EXPLORE</h3>
+          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" />
+        </header>
         <ul className="footerLinks">
           <li>THE NORTH FACE APP</li>
         </ul>
@@ -62,10 +77,10 @@ export default function Footer(props) {
       <img className="tnf-logo" src="./../../images/logo-tnf.svg" alt="TNF Logo"/>
 
       <div className="copyright">
-      <p>Site Clone by Dave Guymon</p>
+      <p>SITE CLONE BY DAVE GUYMON</p>
       <br />
-      <p>DevMountain Student, Provo, UT</p>
-      <p>Available for Hire</p>
+      <p>DEVMOUNTAIN STUDENT, PROVO, UT</p>
+      <p>AVAILABLE FOR HIRE</p>
       </div>
       </div>
 

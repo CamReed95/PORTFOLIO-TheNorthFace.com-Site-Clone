@@ -1,6 +1,8 @@
 .homepageContainer {
-  min-height: 90vh;
+  min-height: 92.5vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .topSectionContainer {
@@ -40,36 +42,40 @@
   line-height: 43px;
   font-weight: 900;
   letter-spacing: 1.3px;
+  text-align: center;
 }
 
 .tlContentInner h2 {
   font-size: 18.5px;
   letter-spacing: 1.3px;
   line-height: 27px;
+  text-align: center;
 }
 
-.shopPacks {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: .9em;
-  height: 2.5em;
+  height: 2em;
   width: 70%;
   border: 1px solid black;
 }
 
-.shopPacks h3 {
-  font-size: 15px;
+.button h3 {
+  font-size: 1em;
   letter-spacing: 1.5px;
   font-weight: 900;
+  text-align: center;
 }
 
-.shopPacks a {
+.button a, .button a:visited {
   text-decoration: none;
   font-weight: 900;
+  color: black;
 }
 
-.shopPacks:hover, .shopPacks:hover h3 {
+.button:hover, .button:hover h3 {
   background-color: black;
   color: white;
 }
@@ -81,11 +87,69 @@
   background-size: 100% 100%;
 }
 
-
-
+/******************/
 
 .bottomSectionContainer {
-  min-height: 45vh;
+  min-height: 40vh;
   width: 100%;
-  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 24px;
+  /*background-color: pink;*/
+}
+
+.feature {
+  min-height: 100%;
+  width: 32.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /*background-color: goldenrod;*/
+}
+
+.featureLeft {
+  min-height: 80%;
+}
+
+.imgContainer {
+  width: 100%;
+  min-height: 240px;
+  background-size: cover;
+  background-position: top;
+}
+
+.imgLeft {
+  background-image: url('./tnf-homepage-shop-backpacks.jpg');
+}
+
+.imgMiddle {
+  background-image: url('./tnf-homepage-shop-womens.jpg');
+}
+
+.imgRight {
+  background-image: url('./tnf-homepage-shop-mens.jpg');
+  background-position: left top 25%;
+}
+
+.feature h1 {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  text-align: center;
+  padding: 24px 0 8px 0;
+}
+
+.feature p {
+  font-size: 14px;
+  line-height: 22.5px;
+  text-align: center;
+  letter-spacing: .27px;
+  padding-bottom: 48px;
+}
+
+.featureButton {
+  width: 45%;
 }

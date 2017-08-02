@@ -15,8 +15,8 @@ class Header extends Component {
 
 
           <div className="logoContainer">
-          <Link to="/" className="logoLink">
-            <img className="tnfLogo" src="./../../images/logo-tnf.svg" />
+            <Link to="/" className="logoLink">
+              <img className="tnfLogo" src="./../../images/logo-tnf.svg" />
             </Link>
           </div>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.css';
+import { Link } from 'react-router-dom';
 
 export default function Footer(props) {
   return (
@@ -74,8 +75,9 @@ export default function Footer(props) {
       </div>
 
       <div className="byLine">
-      <img className="tnf-logo" src="./../../images/logo-tnf.svg" alt="TNF Logo"/>
-
+      <Link to="/">
+        <img className="tnf-logo" src="./../../images/logo-tnf.svg" alt="TNF Logo"/>
+      </Link>
       <div className="copyright">
       <p>SITE CLONE BY DAVE GUYMON</p>
       <br />

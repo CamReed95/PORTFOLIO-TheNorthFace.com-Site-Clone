@@ -11,8 +11,8 @@ body {
   height: 4.5vh;
   background-color: #E3E3E3;
   font-weight: 700;
-  font-size: 13px;
-  letter-spacing: .5px;
+  font-size: .8em;
+  letter-spacing: .05em;
 }
 
 .header {
@@ -47,7 +47,7 @@ body {
   min-height: 7vh;
   display: flex;
   align-items: center;
-  margin-right: 16px;
+  margin-right: 1em;
 }
 
 .hamIcon {
@@ -58,15 +58,15 @@ body {
 }
 
 .hamRow {
-  width: 27px;
-  height: 5px;
-  margin-bottom: 2px;
+  width: 1.7em;
+  height: 0.3em;
+  margin-bottom: 0.2em;
   background-color: black;
 }
 
 .cartIcon {
   height: 4.5vh;
-  margin-right: 30px;
+  margin-right: 1.8em;
 }
 
 .linksContainer{
@@ -78,7 +78,7 @@ body {
 
   .freeReturns {
     font-weight: 900;
-    font-size: 16px;
+    font-size: 1em;
   }
 
   .header {

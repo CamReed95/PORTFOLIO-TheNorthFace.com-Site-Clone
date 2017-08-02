@@ -20,6 +20,14 @@ class Header extends Component {
             </Link>
           </div>
 
+          <div className="mobileNavIcons">
+            <img className="cartIcon"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png" />
+            <div className="hamIcon">
+              <div className="hamRow"></div>
+              <div className="hamRow"></div>
+              <div className="hamRow"></div>
+            </div>
+          </div>
 
           <div className="linksContainer">
           <NavBar />

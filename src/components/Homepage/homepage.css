@@ -67,6 +67,7 @@
   letter-spacing: 1.5px;
   font-weight: 900;
   text-align: center;
+  padding-bottom: 16px;
 }
 
 .button a, .button a:visited {

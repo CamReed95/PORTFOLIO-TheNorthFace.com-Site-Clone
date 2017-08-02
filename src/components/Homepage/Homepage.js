@@ -26,7 +26,7 @@ export default function Homepage (props) {
       </section>
 
       <section className="bottomSectionContainer">
-        <div className="feature featureLeft">
+        <div className="feature">
           <div className="imgContainer imgLeft">
           </div>
           <h1>{"WE'VE GOT YOUR BACK"}</h1>
@@ -38,26 +38,26 @@ export default function Homepage (props) {
           </div>
         </div>
 
-        <div className="feature featureMiddle">
+        <div className="feature">
           <div className="imgContainer imgMiddle">
           </div>
           <h1>{"SHOW THEM WHO'S BOSS"}</h1>
           <p>Get your hands on the best form-fitting gear for fall.</p>
           <div className="button featureButton">
             <Link to="/womens">
-              <h3>{"SHOP WOMENS"}</h3>
+              <h3>{"SHOP WOMEN'S"}</h3>
             </Link>
           </div>
         </div>
 
-        <div className="feature featureRight">
+        <div className="feature">
           <div className="imgContainer imgRight">
           </div>
           <h1>PREPARE FOR ADVENTURE</h1>
           <p>Look good when you get there.</p>
           <div className="button featureButton">
             <Link to="/mens">
-              <h3>{"SHOP MENS"}</h3>
+              <h3>{"SHOP MEN'S"}</h3>
             </Link>
           </div>
         </div>

@@ -8,8 +8,8 @@ class App extends Component {
     return (
       <main>
         <Header />
-
-        <Footer />  
+          {Router}
+        <Footer />
       </main>
     );
   }

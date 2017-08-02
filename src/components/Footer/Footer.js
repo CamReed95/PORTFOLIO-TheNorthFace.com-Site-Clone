@@ -15,8 +15,8 @@ export default function Footer(props) {
         <ul className="footerLinks">
           <li>Gifts</li>
           <li>Gift Cards</li>
-          <li>Mens</li>
-          <li>Womens</li>
+          <li>{"Women's"}</li>
+          <li>{"Men's"}</li>
           <li>Backpacks</li>
         </ul>
         </div>
@@ -85,8 +85,8 @@ export default function Footer(props) {
       </div>
 
       </div>
-
-
+      <div className="mobileViewFooterBar">
+      </div>
     </div>
   )
 }

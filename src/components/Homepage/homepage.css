@@ -27,6 +27,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .tlContentInner {
@@ -58,8 +59,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2em;
-  width: 70%;
+  min-height: 3.2em;
+  min-width: 58%;
   border: 1px solid black;
 }
 
@@ -144,7 +145,7 @@
 }
 
 .featureButton {
-  width: 70%;
+  min-width: 45%;
   margin-bottom: 2.7em;
 }
 
@@ -158,7 +159,7 @@
 
   .tlContent {
     min-height: 30vh;
-    width: 25%;
+    min-width: 28%;
   }
 
   .tlContentInner h1 {
@@ -168,6 +169,10 @@
   .tlContentInner h2 {
     font-size: 18.5px;
     letter-spacing: 0.07em;
+  }
+
+  .button {
+    min-width: 68%;
   }
 
   .trContent {
@@ -194,6 +199,6 @@
   }
 
   .featureButton {
-    width: 45%;
+    min-width: 45%;
   }
 }

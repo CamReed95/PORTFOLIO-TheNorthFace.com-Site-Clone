@@ -15,7 +15,7 @@ export default function Homepage (props) {
               <h2>Backed by a Lifetime Warranty.</h2>
               <div className="button">
                 <Link to='/backpacks'>
-                  <h3>SHOP ALL PACKS</h3>
+                  <h3>FIND THE PERFECT PACK</h3>
                 </Link>
               </div>
             </div>
@@ -33,7 +33,7 @@ export default function Homepage (props) {
           <p>A lifetime warranty for a lifetime of adventure.</p>
           <div className="button featureButton">
             <Link to="/backpacks">
-              <h3>FIND YOUR PERFECT PACK</h3>
+              <h3>SHOP BACKPACKS</h3>
             </Link>
           </div>
         </div>

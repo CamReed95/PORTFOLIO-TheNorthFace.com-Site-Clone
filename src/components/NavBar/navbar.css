@@ -2,7 +2,6 @@
   display: none;
 }
 
-
 /*IPAD VIEW*/
 
 @media(min-width: 400px) {
@@ -42,7 +41,7 @@
     padding-left: 1em;
     padding-bottom: 0.1em;
     letter-spacing: 0.07em;
-    font-size: 15px;
+    font-size: 1em;
   }
 
   .navLinks {
@@ -83,7 +82,7 @@
 @media(min-width: 800px) {
 
   .navLinks {
-    padding-left: 1em;
+    padding-left: 0.6em;
   }
 
 }

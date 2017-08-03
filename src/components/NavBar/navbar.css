@@ -2,59 +2,88 @@
   display: none;
 }
 
-@media(min-width: 400px){
-.navBarContainer{
-  display: flex;
+
+/*IPAD VIEW*/
+
+@media(min-width: 400px) {
+  .navBarContainer{
+    display: flex;
+  }
+
+  .topNav {
+    height: 10vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+  }
+
+  .userLinks {
+    height: 45%;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 64%;
+    padding-right: 2em;
+    font-size: 0.8em;
+    letter-spacing: 0.07em;
+    list-style: none;
+  }
+
+  .navLinks {
+    width: 55%;
+    height: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1em;
+    padding-bottom: 0.1em;
+    letter-spacing: 0.07em;
+    font-size: 15px;
+  }
+
+  .navLinks {
+    width: 55%;
+    height: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1.5em;
+    padding-bottom: 0.1em;
+    letter-spacing: 0.07em;
+    font-size: 15px;
+  }
+
+  .navLinks li {
+    padding-right: 4em;
+  }
+
+  .navLinks a {
+    text-decoration: none;
+    font-weight: 900;
+  }
+
+  .navLinks a:visited {
+    color: #2A2A2A;
+  }
+
+  .navLinks a:hover {
+    color: #E72B1E;
+  }
+
 }
 
-.topNav {
-  height: 10vh;
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
-  font-weight: 900;
-}
 
-.userLinks {
-  height: 45%;
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 64%;
-  padding-right: 2em;
-  font-size: 0.8em;
-  letter-spacing: 0.07em;
-  list-style: none;
-}
+/*DESKTOP VIEW*/
 
-.navLinks {
-  width: 55%;
-  height: 55%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 1em;
-  padding-bottom: 0.1em;
-  letter-spacing: 0.07em;
-  font-size: 15px;
-}
+@media(min-width: 800px) {
 
-.navLinks li {
-  padding-right: 4em;
-}
+  .navLinks {
+    padding-left: 1em;
+  }
 
-.navLinks a {
-  text-decoration: none;
-  font-weight: 900;
 }
-
-.navLinks a:visited {
-  color: #2A2A2A;
-}
-
-.navLinks a:hover {
-  color: #E72B1E;
-}}

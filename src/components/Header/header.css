@@ -1,6 +1,7 @@
 body {
   font-family: "Lato", sans-serif;
   color: #2A2A2A;
+  font-size: 16px;
 }
 
 .freeReturns {
@@ -27,11 +28,11 @@ body {
 
 .logoContainer {
   width: auto;
-  min-height: 100%;
+  min-height: 7vh;
 }
 
 .logoLink {
-  height: 100%;
+  min-height: 7vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -39,7 +40,7 @@ body {
 }
 
 .tnfLogo {
-  min-height: 100%;
+  min-height: 7vh;
 }
 
 .mobileNavIcons {
@@ -74,15 +75,60 @@ body {
 }
 
 
-@media(min-width: 400px) {
+/*IPAD VIEW*/
 
+@media(min-width: 400px) {
   .freeReturns {
     font-weight: 900;
     font-size: 1em;
   }
 
   .header {
-    width: 60vw;
+    width: 100%;
+    min-height: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'lato';
+  }
+
+
+  .linksContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 88%;
+  }
+
+  .mobileNavIcons{
+    display: none;
+  }
+
+  .logoContainer {
+    width: auto;
+    min-height: 10vh;
+  }
+
+  .logoLink {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tnfLogo {
+    min-height: 10vh;
+  }
+
+}
+
+
+/*DESKTOP VIEW*/
+
+@media(min-width: 800px) {
+
+  .header {
+    width: 60%;
     min-height: 10vh;
     margin-left: auto;
     margin-right: auto;
@@ -105,17 +151,6 @@ body {
   .tnfLogo {
     min-height: 8vh;
     flex-grow: 1;
-  }
-
-  .linksContainer {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 88%;
-  }
-
-  .mobileNavIcons{
-    display: none;
   }
 
 }

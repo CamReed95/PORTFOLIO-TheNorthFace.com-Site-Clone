@@ -12,8 +12,8 @@ export default function NavBar(props) {
         <li className="cartButton">Cart</li>
       </ul>
       <ul className="navLinks">
-          <li><Link to="/womens">{"WOMEN'S"}</Link></li>
           <li><Link to="/mens">{"MEN'S"}</Link></li>
+          <li><Link to="/womens">{"WOMEN'S"}</Link></li>
           <li><Link to="/backpacks">BACKPACKS</Link></li>
           <li><Link to="/explore">EXPLORE</Link></li>
       </ul>

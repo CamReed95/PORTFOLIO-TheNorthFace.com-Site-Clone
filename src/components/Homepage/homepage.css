@@ -84,7 +84,8 @@
 
 .trContent {
   min-height: 45vh;
-  min-width: 100%;
+  min-width: 95%;
+  margin-left: 5%;
   background-image: url(./iphone-homepage-transformer.gif);
   background-size: 100% 100%;
 }
@@ -150,8 +151,72 @@
 }
 
 
+/*IPAD VIEW*/
 @media(min-width: 400px){
 
+  .topContent {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .tlContent {
+    min-height: 20vh;
+    min-width: 100%;
+  }
+
+  .tlContentInner h1 {
+    font-size: 2.8em;
+  }
+
+  .tlContentInner h2 {
+    font-size: 1.25em;
+    letter-spacing: 0.07em;
+  }
+
+  .button {
+    min-width: 33%;
+  }
+
+  .trContent {
+    width: 95%;
+    margin-left: 4%;
+    margin-right: auto;
+    min-height: 34vh;
+    background-image: url(./homepage-transformer.gif);
+  }
+
+  .bottomSectionContainer {
+    flex-direction: row;
+    padding-bottom: 4.8vh;
+  }
+
+  .imgContainer {
+    width: 100%;
+    min-height: 23.5vh;
+  }
+
+  .feature {
+    width: 32%;
+  }
+
+  .feature h1 {
+    min-height: 4.2em;
+    font-size: 1.25em;
+    line-height: 1.2em;
+  }
+
+  .feature p {
+    min-height: 7em;
+    font-size: 1em;
+  }
+
+  .featureButton {
+    min-width: 75%;
+  }
+}
+
+/*DESKTOP VIEW*/
+@media(min-width: 800px) {
   .topContent {
     width: 85%;
     flex-direction: row;
@@ -177,6 +242,7 @@
 
   .trContent {
     min-width: 75%;
+    margin: 0;
     background-image: url(./homepage-transformer.gif);
   }
 
@@ -190,15 +256,15 @@
 
   .feature h1 {
     font-size: 1.25em;
-    line-height: 1.2em;
   }
 
   .feature p {
-    font-size: 1em;
+    font-size: 1.1em;
     padding-bottom: 4em;
   }
 
   .featureButton {
     min-width: 45%;
   }
+
 }

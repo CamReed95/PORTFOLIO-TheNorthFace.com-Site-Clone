@@ -38,19 +38,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 1em;
-    padding-bottom: 0.1em;
-    letter-spacing: 0.07em;
-    font-size: 1em;
-  }
-
-  .navLinks {
-    width: 55%;
-    height: 55%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
     padding-left: 1.5em;
     padding-bottom: 0.1em;
     letter-spacing: 0.07em;
@@ -58,7 +45,7 @@
   }
 
   .navLinks li {
-    padding-right: 4em;
+    padding-right: 2.5em;
   }
 
   .navLinks a {
@@ -80,6 +67,10 @@
 /*DESKTOP VIEW*/
 
 @media(min-width: 800px) {
+
+  .userLinks {
+      font-size: 0.8em;
+  }
 
   .navLinks {
     padding-left: 0.6em;

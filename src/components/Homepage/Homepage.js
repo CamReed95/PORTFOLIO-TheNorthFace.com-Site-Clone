@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './../../contentContainer.css';
+import './../../styles/contentContainer.css';
 import './homepage.css';
 
 export default function Homepage (props) {

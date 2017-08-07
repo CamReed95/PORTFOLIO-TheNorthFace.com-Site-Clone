@@ -123,6 +123,8 @@
 
   .footerLinks li {
     font-weight: 600;
+    list-style-type: none;
+
   }
 
   .appStore {
@@ -158,7 +160,7 @@
 
   .footerContent {
 
-    max-width: 40%;
+    max-width: 60%;
     min-height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -170,6 +172,10 @@
 
   .container h3 {
     font-size: .925em;
+  }
+
+  .byLine {
+    width: 85%;
   }
 
   .copyright {

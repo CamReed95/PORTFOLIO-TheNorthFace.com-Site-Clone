@@ -1,5 +1,4 @@
 import React from 'react';
-import './../../contentContainer.css';
 import './backpacks.css';
 
 export default function Backpacks(props) {

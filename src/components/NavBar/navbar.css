@@ -46,11 +46,13 @@
 
   .navLinks li {
     padding-right: 2.5em;
+    list-style-type: none;
   }
 
   .navLinks a {
-    text-decoration: none;
+    text-decoration-line: none;
     font-weight: 900;
+    color: #2A2A2A;
   }
 
   .navLinks a:visited {

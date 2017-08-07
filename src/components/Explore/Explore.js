@@ -1,5 +1,4 @@
 import React from 'react';
-import './../../contentContainer.css';
 import './explore.css';
 
 export default function Explore(props) {

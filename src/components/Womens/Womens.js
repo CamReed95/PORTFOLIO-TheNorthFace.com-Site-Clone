@@ -1,5 +1,4 @@
 import React from 'react';
-import './../../contentContainer.css';
 import './womens.css';
 
 export default function Womens (props) {

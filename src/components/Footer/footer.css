@@ -14,7 +14,6 @@
   justify-content: center;
   width: 100%;
   min-height: 8vh;
-  /*padding: 0 2em 0 0;*/
 }
 
 .container h3 {
@@ -86,7 +85,7 @@
 
 
 /*IPAD VIEW*/
-@media(min-width: 400px) {
+@media(min-width: 700px) {
   .footerContainer {
     border-top: 1px #E3E3E3 solid;
     min-height: 30vh;
@@ -172,7 +171,7 @@
 
 
 /*DESKTOP VIEW*/
-@media(min-width: 800px){
+@media(min-width: 1000px){
 
   .footerContent {
 

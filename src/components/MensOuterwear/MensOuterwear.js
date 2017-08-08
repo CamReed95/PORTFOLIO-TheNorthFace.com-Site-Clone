@@ -1,6 +1,5 @@
 import React,{ Component }from 'react';
 import { getProducts } from './../../services/axiosServices';
-import './../../styles/contentContainer.css';
 import './../../styles/allProductsView.css';
 import { Link } from 'react-router-dom';
 import IndividualProduct from './../IndividualProduct/IndividualProduct';
@@ -30,9 +29,11 @@ componentDidMount() {
 
   render() {
 
-    const mensOuterwear = this.state.products.map( (product, i) => {
+    const mensOuterwear = this.state.products.map( (product, index, arr) => {
+
+
       return (
-        <IndividualProduct key={i} product={product} />
+        <IndividualProduct key={product.product_id} id={product.product_id} product={product} />
       )
     } )
 

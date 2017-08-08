@@ -152,7 +152,7 @@
 
 
 /*IPAD VIEW*/
-@media(min-width: 400px){
+@media(min-width: 700px){
 
   .topContent {
     width: 100%;
@@ -216,7 +216,7 @@
 }
 
 /*DESKTOP VIEW*/
-@media(min-width: 800px) {
+@media(min-width: 1300px) {
   .topContent {
     width: 85%;
     flex-direction: row;

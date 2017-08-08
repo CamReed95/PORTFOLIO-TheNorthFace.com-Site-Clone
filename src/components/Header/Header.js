@@ -16,12 +16,12 @@ class Header extends Component {
 
           <div className="logoContainer">
             <Link to="/" className="logoLink">
-              <img className="tnfLogo" src="./../../images/logo-tnf.svg" />
+              <img className="tnfLogo" src="./../../images/logo-tnf.svg" alt="The North Face Logo"/>
             </Link>
           </div>
 
           <div className="mobileNavIcons">
-            <img className="cartIcon"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png" />
+            <img className="cartIcon"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png" alt="Cart icon" />
             <div className="hamIcon">
               <div className="hamRow"></div>
               <div className="hamRow"></div>

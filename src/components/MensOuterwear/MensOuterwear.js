@@ -2,7 +2,7 @@ import React,{ Component }from 'react';
 import { getProducts } from './../../services/axiosServices';
 import './../../styles/contentContainer.css';
 import './../../styles/allProductsView.css';
-
+import { Link } from 'react-router-dom';
 
 export default class MensOuterwear extends Component {
   constructor(props) {
@@ -30,8 +30,8 @@ componentDidMount() {
     const mensOuterwear = this.state.products.map( (product, i) => {
       return (
         <div key={i} className="productsContainer">
-          <img src={product.img1} className="productImg"/>
-          <h3>{product.name}</h3>
+          <img src={product.img1} className="productImg" alt="Product"/>
+          <h3 className="productName">{product.name}</h3>
           <p>${product.price}.00</p>
         </div>
       )
@@ -39,7 +39,16 @@ componentDidMount() {
 
     return (
       <div className="contentContainer">
+        <div className="breadCrumbs">
+          <p><Link to="/">HOME</Link></p>
+          <p>/</p>
+          <p><Link to="/mens">{"MEN'S"}</Link></p>
+          <h3>/ /</h3>
+          <h3 className="currPage">OUTERWEAR</h3>
+        </div>
+        <div className="productsLayout">
         {mensOuterwear}
+        </div>
       </div>
     )
   }

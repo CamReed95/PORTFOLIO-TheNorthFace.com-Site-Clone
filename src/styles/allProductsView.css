@@ -3,8 +3,57 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  font-weight: 900;
+  width: 45%;
+  padding-bottom: 10vh;
+}
+
+.breadCrumbs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 15vh;
+  width: 97%;
+  padding-left: 3%;
+}
+
+.breadCrumbs p {
+  margin-right: 8px;
+  font-weight: 900;
+  color: red;
+}
+
+.breadCrumbs a {
+  text-decoration-line: none;
+  font-weight: 900;
+  color: red;
+}
+
+.breadCrumbs a:visited {
+  color: red;
+}
+
+.breadCrumbs .currPage {
+  margin-left: 8px;
+  font-size: 1.75em;
 }
 
 .productImg {
-  height: 250px;
+  height: 187px;
+  width: 161px;
+}
+
+.productName {
+  font-size: 1.1em;
+  font-weight: 900;
+  line-height: 1.4em;
+  height: 50px;
+}
+
+.productsLayout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
 }

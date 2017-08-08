@@ -11,7 +11,7 @@ export default function Footer(props) {
         <div className="container">
         <header className="linksHeader">
           <h3>SHOP</h3>
-          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" />
+          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" alt="Down Arrow Icon"/>
         </header>
         <ul className="footerLinks">
           <li>Gifts</li>
@@ -25,7 +25,7 @@ export default function Footer(props) {
         <div className="container">
         <header className="linksHeader">
           <h3>HELP</h3>
-          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" />
+          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" alt="Down Arrow Icon"/>
         </header>
         <ul className="footerLinks">
           <li>FAQ?</li>
@@ -39,7 +39,7 @@ export default function Footer(props) {
         <div className="container">
         <header className="linksHeader">
           <h3>ABOUT TNF</h3>
-          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" />
+          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" alt="Down Arrow Icon"/>
         </header>
         <ul className="footerLinks">
           <li>Our Story</li>
@@ -54,7 +54,7 @@ export default function Footer(props) {
         <div className="container">
         <header className="linksHeader">
           <h3>EVENTS</h3>
-          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" />
+          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" alt="Down Arrow Icon"/>
         </header>
         <ul className="footerLinks">
           <li>Endurance Challenge</li>
@@ -65,7 +65,7 @@ export default function Footer(props) {
         <div className="container">
         <header className="linksHeader">
           <h3>EXPLORE</h3>
-          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" />
+          <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" alt="Down Arrow Icon"/>
         </header>
         <ul className="footerLinks">
           <li>THE NORTH FACE APP</li>
@@ -76,7 +76,7 @@ export default function Footer(props) {
 
       <div className="byLine">
       <Link to="/">
-        <img className="tnf-logo" src="./../../images/logo-tnf.svg" alt="TNF Logo"/>
+        <img className="tnf-logo" src="./../../images/logo-tnf.svg" alt="The North Face Logo"/>
       </Link>
       <div className="copyright">
       <p>SITE CLONE BY DAVE GUYMON</p>

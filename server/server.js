@@ -6,6 +6,8 @@ const cors = require('cors');
 const pc = require('./products_controller');
 const port = process.env.PORT;
 const connectionString = process.env.CONNECTION_STRING;
+const path = require('path');
+
 
 const app = express();
 app.use( bodyParser.json() );

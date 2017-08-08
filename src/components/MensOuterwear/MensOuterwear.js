@@ -31,8 +31,21 @@ componentDidMount() {
       return (
         <div key={i} className="productsContainer">
           <img src={product.img1} className="productImg" alt="Product"/>
+
+          <div className="thumbnails">
+            {product.img1 ? <img src={product.img1} alt="product thumbnail"/> :''}
+            {product.img2 ? <img src={product.img2} alt="product thumbnail"/> :''}
+            {product.img3 ? <img src={product.img3} alt="product thumbnail"/> :''}
+            {product.img4 ? <img src={product.img4} alt="product thumbnail"/> :''}
+          </div>
+
           <h3 className="productName">{product.name}</h3>
           <p>${product.price}.00</p>
+
+          <div className="addToCartButton">
+            <h2>ADD TO CART</h2>
+          </div>
+
         </div>
       )
     } )

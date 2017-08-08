@@ -48,12 +48,45 @@
   font-size: 1.1em;
   font-weight: 900;
   line-height: 1.4em;
-  height: 50px;
+  height: 80px;
 }
+
+.addToCartButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.2em;
+  min-width: 80%;
+  background-color: red;
+  margin-top: 2em;
+}
+
+.addToCartButton h2 {
+  font-size: 1em;
+  letter-spacing: 0.12em;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+}
+
 
 .productsLayout {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 
+}
+
+.thumbnails {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.thumbnails img {
+  height: 100%;
+  width: auto;
+  margin: 0 4px;
 }

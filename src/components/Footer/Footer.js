@@ -78,12 +78,12 @@ export default function Footer(props) {
       <Link to="/">
         <img className="tnf-logo" src="./../../images/logo-tnf.svg" alt="The North Face Logo"/>
       </Link>
-      <div className="copyright">
-      <p>SITE CLONE BY DAVE GUYMON</p>
-      <br />
-      <p>DEVMOUNTAIN STUDENT, PROVO, UT</p>
-      <p>AVAILABLE FOR HIRE</p>
-      </div>
+        <div className="copyright">
+        <p>SITE CLONE BY DAVE GUYMON</p>
+        <br />
+        <p>DEVMOUNTAIN STUDENT, PROVO, UT</p>
+        <p>AVAILABLE FOR HIRE</p>
+        </div>
       </div>
 
       </div>

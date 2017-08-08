@@ -261,6 +261,9 @@
   .feature p {
     font-size: 1.1em;
     padding-bottom: 4em;
+    margin: 0;
+    padding: 0;
+
   }
 
   .featureButton {

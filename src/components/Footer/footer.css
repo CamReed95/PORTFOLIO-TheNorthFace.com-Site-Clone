@@ -1,4 +1,3 @@
-
 .footerContainer {
   border-top: 1px #E3E3E3 solid;
   min-height: auto;
@@ -53,6 +52,10 @@
   flex-direction: row;
 }
 
+.byLine a {
+  width: auto;
+}
+
 .tnf-logo {
   min-height: 4.5em;
   margin-right: 1em;
@@ -66,7 +69,11 @@
   justify-content: center;
   font-size: .7em;
   font-weight: 700;
-  line-height: .3em;
+  line-height: 1.35em;
+}
+
+.copyright p {
+  margin: 0
 }
 
 .mobileViewFooterBar{
@@ -108,9 +115,14 @@
     width: auto;
   }
 
+  .linksHeader {
+    margin-left: 0;
+  }
+
   .container h3 {
     font-weight: 900;
     font-size: .9em;
+    width: 100%;
   }
 
   .downArrow {
@@ -122,6 +134,7 @@
     flex-direction: column;
     font-size: .8em;
     line-height: 2.4em;
+    padding: 0;
   }
 
   .footerLinks li {
@@ -179,6 +192,10 @@
 
   .byLine {
     width: 85%;
+  }
+
+  .byLine a {
+
   }
 
   .copyright {

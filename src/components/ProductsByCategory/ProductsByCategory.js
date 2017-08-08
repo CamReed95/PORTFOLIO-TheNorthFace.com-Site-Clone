@@ -6,7 +6,7 @@ import IndividualProduct from './../IndividualProduct/IndividualProduct';
 
 
 
-export default class MensOuterwear extends Component {
+export default class ProductsByCategory extends Component {
   constructor(props) {
     super(props);
 
@@ -19,8 +19,7 @@ export default class MensOuterwear extends Component {
 componentDidMount() {
   console.log("COMPONENT MOUNTED")
 
-  getProducts('mens', 'outerwear').then(products => {
-    console.log("WORKING!!!");
+  getProducts(this.props.match.params.gender, this.props.match.params.category).then(products => {
     this.setState({products});
     console.log(this.state.products)
   });
@@ -29,9 +28,7 @@ componentDidMount() {
 
   render() {
 
-    const mensOuterwear = this.state.products.map( (product, index, arr) => {
-
-
+    const allProducts = this.state.products.map( (product, index, arr) => {
       return (
         <IndividualProduct key={product.product_id} id={product.product_id} product={product} />
       )
@@ -42,15 +39,24 @@ componentDidMount() {
         <div className="breadCrumbs">
           <p><Link to="/">HOME</Link></p>
           <p>/</p>
-          <p><Link to="/mens">{"MEN'S"}</Link></p>
+          <p><Link to={`/${this.props.match.params.gender}`}>{this.props.match.params.gender.toUpperCase()}</Link></p>
           <h3>/ /</h3>
-          <h3 className="currPage">OUTERWEAR</h3>
+          <h3 className="currPage">{this.props.match.params.category.toUpperCase()}</h3>
         </div>
         <div className="productsLayout">
-        {mensOuterwear}
+        {allProducts}
         </div>
       </div>
     )
   }
 
 }
+
+// <p><Link to={`/mens/${product_id}`}>{"MEN'S"}</Link></p>
+
+// getProducts(this.props.match.params.gender, this.props.match.params.category, 5).then(products => {
+//   console.log("WORKING!!!");
+//   this.setState({products});
+//   console.log(this.state.products)
+// });
+// }

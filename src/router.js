@@ -5,15 +5,21 @@ import Mens from './components/Mens/Mens';
 import Womens from './components/Womens/Womens';
 import Backpacks from './components/Backpacks/Backpacks';
 import Explore from './components/Explore/Explore';
-import MensOuterwear from './components/MensOuterwear/MensOuterwear';
+import ProductsByCategory from './components/ProductsByCategory/ProductsByCategory';
+import DetailedView from './components/DetailedView/DetailedView';
 
 export default (
   <Switch>
     <Route exact path="/" component={ Homepage } />
     <Route exact path="/mens" component={ Mens } />
-    <Route path="/mens/outerwear" component={ MensOuterwear } />
+    <Route path="/:gender/:category" component={ ProductsByCategory } />
+    <Route path="/:product_id" component={ DetailedView } />
     <Route path="/womens" component={ Womens } />
     <Route path="/backpacks" component={ Backpacks } />
     <Route path="/explore" component={ Explore } />
+
   </Switch>
 )
+
+
+// <Route path="/item/:id" component={ Explore } />}

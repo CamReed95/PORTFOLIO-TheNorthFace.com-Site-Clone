@@ -2,10 +2,29 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
 import NavBar from './../NavBar/NavBar';
+import DropdownMenu from './../DropdownMenu/DropdownMenu';
 
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuActive: true
+    }
+
+    this.toggleMenu = this.toggleMenu.bind(this);
+
+  }
+
+toggleMenu() {
+  console.log(this.state.menuActive)
+  this.setState({
+    menuActive: !this.state.menuActive
+  })
+}
+
   render() {
+
     return (
       <div className="headerContainer">
         <div className="freeReturns">
@@ -22,7 +41,7 @@ class Header extends Component {
 
           <div className="mobileNavIcons">
             <img className="cartIcon"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png" alt="Cart icon" />
-            <div className="hamIcon">
+            <div className="hamIcon" onClick={ this.toggleMenu } >
               <div className="hamRow"></div>
               <div className="hamRow"></div>
               <div className="hamRow"></div>
@@ -33,7 +52,7 @@ class Header extends Component {
           <NavBar />
           </div>
         </div>
-
+        <DropdownMenu menuActive={ this.state.menuActive } />
       </div>
     )
   }

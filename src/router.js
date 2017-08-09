@@ -14,7 +14,7 @@ export default (
     <Route exact path="/mens" component={ Mens } />
     <Route path="/:gender/:category" component={ ProductsByCategory } />
     <Route path="/:product_id" component={ DetailedView } />
-    <Route path="/womens" component={ Womens } />
+    <Route exact path="/womens" component={ Womens } />
     <Route path="/backpacks" component={ Backpacks } />
     <Route path="/explore" component={ Explore } />
 

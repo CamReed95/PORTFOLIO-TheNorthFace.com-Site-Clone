@@ -52,7 +52,7 @@ toggleMenu() {
           <NavBar />
           </div>
         </div>
-        <DropdownMenu menuActive={ this.state.menuActive } />
+        <DropdownMenu menuActive={ this.state.menuActive} toggleMenu={this.toggleMenu} />
       </div>
     )
   }

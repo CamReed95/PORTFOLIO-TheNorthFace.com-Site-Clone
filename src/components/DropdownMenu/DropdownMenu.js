@@ -35,9 +35,6 @@ export default class DropdownMenu extends Component {
   }
 
 
-
-
-
   render() {
     let menuDisplay = { display: 'none' }
     let submenuDisplay = { display: 'none' }
@@ -77,7 +74,7 @@ export default class DropdownMenu extends Component {
             </div>
           </div>
 
-
+{/*NEED TO LINK BACKPACKS TO COMPONENT ONCE CREATED*/}
 
           <div className="dropdownContainer">
             <div className="dropdownCategory" onClick={ this.toggleBackpacks }>

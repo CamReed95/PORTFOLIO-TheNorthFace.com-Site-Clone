@@ -47,7 +47,7 @@
   border-bottom: 1px solid #E3E3E3;
 }
 
-.dropdownCategory h1, .userLinks h1{
+.dropdownCategory h1, .dropdownUserLinks h1{
   font-weight: 900;
   font-size: 1.25em;
   margin-left: 1em;
@@ -89,6 +89,11 @@
 
 }
 
-.userLinks h1 {
+.dropdownUserLinks h1 {
   margin-top: 6vh;
+}
+
+.submenu a {
+  text-decoration-line: none;
+  color: #2A2A2A;
 }

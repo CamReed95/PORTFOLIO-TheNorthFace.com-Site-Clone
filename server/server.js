@@ -23,7 +23,8 @@ massive( connectionString )
 
 
 //ENDPOINTS GO HERE
-app.get('/:gender/:category', pc.getCategoryByGender)
+app.get('/items/:gender/:category', pc.getCategoryByGender)
+app.get('/item/product/:product_id', pc.getProductById)
 
 
 //KEEP ALL ENDPOINTS ABOVE THIS LINE

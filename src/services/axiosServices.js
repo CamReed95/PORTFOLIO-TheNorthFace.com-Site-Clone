@@ -5,5 +5,9 @@ export function getProducts(gender, category, count) {
 };
 
 export function getLimitedProducts(gender, category, count) {
-  return axios.get(`/${gender}/${category}?count=${count}`).then( products => products.data );
+  return axios.get(`/items/${gender}/${category}?count=${count}`).then( products => products.data );
+};
+
+export function getProductById(product_id) {
+  return axios.get(`/item/product/${product_id}`).then( product => product.data );
 };

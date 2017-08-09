@@ -9,7 +9,6 @@ import IndividualProduct from './../IndividualProduct/IndividualProduct';
 export default class ProductsByCategory extends Component {
   constructor(props) {
     super(props);
-
     this.state={
       products: []
     }
@@ -20,6 +19,14 @@ componentDidMount() {
   console.log("COMPONENT MOUNTED")
 
   getProducts(this.props.match.params.gender, this.props.match.params.category).then(products => {
+    this.setState({products});
+    console.log(this.state.products)
+  });
+}
+
+componentWillReceiveProps(newProps) {
+  console.log("RECEIVED NEW PROPS")
+  getProducts(newProps.match.params.gender, newProps.match.params.category).then(products => {
     this.setState({products});
     console.log(this.state.products)
   });
@@ -51,12 +58,3 @@ componentDidMount() {
   }
 
 }
-
-// <p><Link to={`/mens/${product_id}`}>{"MEN'S"}</Link></p>
-
-// getProducts(this.props.match.params.gender, this.props.match.params.category, 5).then(products => {
-//   console.log("WORKING!!!");
-//   this.setState({products});
-//   console.log(this.state.products)
-// });
-// }

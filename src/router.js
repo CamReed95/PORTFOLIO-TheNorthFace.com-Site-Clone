@@ -12,14 +12,10 @@ export default (
   <Switch>
     <Route exact path="/" component={ Homepage } />
     <Route exact path="/mens" component={ Mens } />
-    <Route path="/:gender/:category" component={ ProductsByCategory } />
-    <Route path="/:product_id" component={ DetailedView } />
+    <Route path="/shop/:gender/:category" component={ ProductsByCategory } />
     <Route exact path="/womens" component={ Womens } />
     <Route path="/backpacks" component={ Backpacks } />
     <Route path="/explore" component={ Explore } />
-
+    <Route path="/product/:product_id" component={ DetailedView } />
   </Switch>
 )
-
-
-// <Route path="/item/:id" component={ Explore } />}

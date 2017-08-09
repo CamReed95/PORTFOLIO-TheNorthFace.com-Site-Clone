@@ -8,7 +8,8 @@ class DetailedView extends Component {
     super(props);
     this.state = {
       product: {},
-      displayImg: ''
+      displayImg: '',
+      sizesArr: []
     }
   }
 
@@ -16,13 +17,20 @@ componentDidMount() {
   console.log("DETAILED VIEW MOUNTED")
 
 getProductById(this.props.match.params.product_id).then( product => {
-  this.setState({product: product[0], displayImg: product[0].img1 })
+  this.setState({product: product[0], displayImg: product[0].img1, sizesArr: product[0].sizes.split(',') })
   console.log(this.state.product);
+  console.log(this.state.product.sizes.split(','));
   });
 }
 
 
   render() {
+
+    const productSizes = this.state.sizesArr.map( (size, index, arr) => {
+      return <div className="size" key={size}>{arr[index]}</div>
+    })
+
+
 
     return (
       <div className="detailedViewContainer">
@@ -49,10 +57,10 @@ getProductById(this.props.match.params.product_id).then( product => {
         {this.state.product.img4 ? <img src={this.state.product.img4} alt="product thumbnail" onClick={ ()=> {
           this.setState({ displayImg: this.state.product.img4 })
         }}/> :''}
-
-
         </div>
-
+        <div className="sizesContainer">
+          {productSizes}
+        </div>
       </div>
     )
   }

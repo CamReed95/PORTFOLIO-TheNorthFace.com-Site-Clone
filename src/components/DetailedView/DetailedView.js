@@ -9,6 +9,7 @@ class DetailedView extends Component {
     this.state = {
       product: {},
       displayImg: '',
+      displayImgColor: '',
       sizesArr: [],
       selectedSize: ''
     }
@@ -18,9 +19,17 @@ componentDidMount() {
   console.log("DETAILED VIEW MOUNTED")
 
 getProductById(this.props.match.params.product_id).then( product => {
-  this.setState({product: product[0], displayImg: product[0].img1, sizesArr: product[0].sizes.split(',') })
+  this.setState({product: product[0], displayImg: product[0].img1, sizesArr: product[0].sizes.split(','), displayImgColor: product[0].color1 })
   console.log(this.state.product);
   });
+}
+
+componentWillReceiveProps(newProps) {
+  console.log("PROPS, DUDE!")
+  getProductById(newProps.match.params.product_id).then( product => {
+    this.setState({product: product[0], displayImg: product[0].img1, sizesArr: product[0].sizes.split(','), displayImgColor: product[0].color1 })
+    console.log(this.state.product);
+    });
 }
 
 
@@ -41,23 +50,29 @@ getProductById(this.props.match.params.product_id).then( product => {
 
         <img src={this.state.displayImg} className="detailImg" alt="product"/>
 
-        <div className="detailThumbnails">
-        {this.state.product.img1 ? <img src={this.state.product.img1} alt="product thumbnail" onClick={ ()=> {
-          this.setState({ displayImg: this.state.product.img1 })
-        }}/> :''}
+        <div className="colorSwap">
+          <div className="detailImgColor">
+            {this.state.displayImgColor}
+          </div>
+          <div className="detailThumbnails">
+          {this.state.product.img1 ? <img src={this.state.product.img1} alt="product thumbnail" onClick={ ()=> {
+            this.setState({ displayImg: this.state.product.img1, displayImgColor: this.state.product.color1 })
+          }}/> :''}
 
-        {this.state.product.img2 ? <img src={this.state.product.img2} alt="product thumbnail" onClick={ ()=> {
-          this.setState({ displayImg: this.state.product.img2 })
-        }}/> :''}
+          {this.state.product.img2 ? <img src={this.state.product.img2} alt="product thumbnail" onClick={ ()=> {
+            this.setState({ displayImg: this.state.product.img2, displayImgColor: this.state.product.color2 })
+          }}/> :''}
 
-        {this.state.product.img3 ? <img src={this.state.product.img3} alt="product thumbnail" onClick={ ()=> {
-          this.setState({ displayImg: this.state.product.img3 })
-        }}/> :''}
+          {this.state.product.img3 ? <img src={this.state.product.img3} alt="product thumbnail" onClick={ ()=> {
+            this.setState({ displayImg: this.state.product.img3, displayImgColor: this.state.product.color3 })
+          }}/> :''}
 
-        {this.state.product.img4 ? <img src={this.state.product.img4} alt="product thumbnail" onClick={ ()=> {
-          this.setState({ displayImg: this.state.product.img4 })
-        }}/> :''}
+          {this.state.product.img4 ? <img src={this.state.product.img4} alt="product thumbnail" onClick={ ()=> {
+            this.setState({ displayImg: this.state.product.img4, displayImgColor: this.state.product.color4 })
+          }}/> :''}
+          </div>
         </div>
+
         <div className="sizesContainer">
             {productSizes}
         </div>

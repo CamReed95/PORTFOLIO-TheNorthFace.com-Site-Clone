@@ -22,19 +22,38 @@
   width: 100%
 }
 
+.colorSwap {
+  width: 95%;
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #2A2A2A;
+  border-bottom: 1px solid #2A2A2A;
+  margin-bottom: 2em;
+}
+
+.detailImgColor {
+  font-size: 1.25em;
+  margin-bottom: 8px;
+}
+
+
 .detailThumbnails {
   width: 100%;
   height: 50px;
   display: flex;
   justify-content: center;
   margin-top: 1em;
-  margin-bottom: 4em;
 }
 
 .detailThumbnails img {
   height: 100%;
   width: auto;
-  margin: 0 4px;
+  margin: 0 10px;
 }
 
 .sizesContainer {

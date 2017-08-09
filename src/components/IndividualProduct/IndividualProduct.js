@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 
 class IndividualProduct extends Component {
   constructor(props) {
@@ -7,7 +9,6 @@ class IndividualProduct extends Component {
       displayImg: props.product.img1
     }
   }
-
 
 
   render() {
@@ -42,7 +43,9 @@ class IndividualProduct extends Component {
         <p>${this.props.product.price}.00</p>
 
         <div className="addToCartButton">
-          <h2>ADD TO CART</h2>
+          <Link to={'/product/' + this.props.product.product_id}>
+          <h2>DETAILED VIEW</h2>
+          </Link>
         </div>
 
       </div>

@@ -90,7 +90,7 @@ export default class DropdownMenu extends Component {
               <h1>{"WOMEN'S"}</h1>
             </div>
           </div>
-          <div className="userLinks">
+          <div className="dropdownUserLinks">
             <h1>FIND A STORE</h1>
             <h1>SIGN IN</h1>
           </div>

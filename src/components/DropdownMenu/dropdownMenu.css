@@ -79,7 +79,7 @@
   min-height: 125px;
 }
 
-.userLinks {
+.dropdownUserLinks {
   min-height: 160px;
   width: 100%;
   display: flex;

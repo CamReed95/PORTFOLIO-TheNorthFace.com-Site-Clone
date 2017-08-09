@@ -73,8 +73,14 @@ componentWillReceiveProps(newProps) {
           </div>
         </div>
 
-        <div className="sizesContainer">
+        <div className="sizesDisplay">
+          <div className="sizesContainer">
             {productSizes}
+          </div>
+        </div>
+
+        <div className="addToCartButton">
+          <h2>ADD TO CART</h2>
         </div>
       </div>
     )

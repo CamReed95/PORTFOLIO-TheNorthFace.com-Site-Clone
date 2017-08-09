@@ -78,17 +78,22 @@
 
 }
 
-.addToCartButton {
+.detailedViewButton {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 3.2em;
-  min-width: 80%;
+  min-width: 85%;
   background-color: red;
   margin-top: 2em;
 }
 
-.addToCartButton h2 {
+.detailedViewButton a {
+  color: white;
+  text-decoration-line: none;
+}
+
+.detailedViewButton h2 {
   font-size: 1em;
   letter-spacing: 0.12em;
   font-weight: 900;
@@ -128,7 +133,11 @@
     font-size: 1.4em;
   }
 
-  .addToCartButton h2 {
+  .detailedViewButton {
+    min-width: 75%;
+  }
+
+  .detailedViewButton h2 {
     font-size: 1.15em;
   }
 
@@ -174,6 +183,10 @@
 
   .productsContainer p {
     font-size: 1em;
+  }
+
+  .detailedViewButton {
+    min-width: 60%;
   }
 
 }

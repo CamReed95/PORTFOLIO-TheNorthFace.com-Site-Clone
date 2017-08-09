@@ -35,16 +35,16 @@ class IndividualProduct extends Component {
           {this.props.product.img4 ? <img src={this.props.product.img4} alt="product thumbnail" onClick={ ()=> {
             this.setState({ displayImg: this.props.product.img4 })
           }}/> :''}
-
-
         </div>
 
-        <h3 className="productName">{this.props.product.name}</h3>
+        <h3 className="productName">
+          {this.props.product.name}
+        </h3>
         <p>${this.props.product.price}.00</p>
 
-        <div className="addToCartButton">
+        <div className="detailedViewButton">
           <Link to={'/product/' + this.props.product.product_id}>
-          <h2>DETAILED VIEW</h2>
+            <h2>DETAILED VIEW</h2>
           </Link>
         </div>
 

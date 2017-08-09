@@ -9,7 +9,8 @@ class DetailedView extends Component {
     this.state = {
       product: {},
       displayImg: '',
-      sizesArr: []
+      sizesArr: [],
+      selectedSize: ''
     }
   }
 
@@ -19,7 +20,6 @@ componentDidMount() {
 getProductById(this.props.match.params.product_id).then( product => {
   this.setState({product: product[0], displayImg: product[0].img1, sizesArr: product[0].sizes.split(',') })
   console.log(this.state.product);
-  console.log(this.state.product.sizes.split(','));
   });
 }
 
@@ -27,7 +27,7 @@ getProductById(this.props.match.params.product_id).then( product => {
   render() {
 
     const productSizes = this.state.sizesArr.map( (size, index, arr) => {
-      return <div className="size" key={size}>{arr[index]}</div>
+      return <div className="size" key={size} onClick={ ()=> this.setState({ selectedSize: size }) }><h1>{arr[index]}</h1></div>
     })
 
 
@@ -59,7 +59,7 @@ getProductById(this.props.match.params.product_id).then( product => {
         }}/> :''}
         </div>
         <div className="sizesContainer">
-          {productSizes}
+            {productSizes}
         </div>
       </div>
     )

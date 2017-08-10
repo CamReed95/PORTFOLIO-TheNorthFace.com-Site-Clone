@@ -74,6 +74,9 @@ componentWillReceiveProps(newProps) {
         </div>
 
         <div className="sizesDisplay">
+          <h1 className="selectedSize">
+            SIZE - {this.state.selectedSize}
+          </h1>
           <div className="sizesContainer">
             {productSizes}
           </div>

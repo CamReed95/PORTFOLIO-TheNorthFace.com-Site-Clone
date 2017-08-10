@@ -3,11 +3,10 @@ module.exports = {
     const db = req.app.get( 'db' );
     const { params, query } = req;
 
+    console.log(req.query)
     if(req.query.count) {
       db.read_products_limited( [params.gender, params.category, query.count] )
     .then( (products) => {
-      console.log(products)
-
       res.status(200).send( products )
     } )
     .catch( (err)=> {

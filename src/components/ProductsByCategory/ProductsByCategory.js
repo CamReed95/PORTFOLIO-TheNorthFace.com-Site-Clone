@@ -17,7 +17,6 @@ export default class ProductsByCategory extends Component {
 
 componentDidMount() {
   console.log("COMPONENT MOUNTED")
-
   getProducts(this.props.match.params.gender, this.props.match.params.category).then(products => {
     this.setState({products});
     console.log(this.state.products)

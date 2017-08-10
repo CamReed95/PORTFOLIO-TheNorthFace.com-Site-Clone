@@ -7,6 +7,7 @@
 @media(min-width: 400px) {
   .navBarContainer{
     display: flex;
+    position: relative;
   }
 
   .topNav {

@@ -1,0 +1,10 @@
+.mainDropdownMenu {
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 250px;
+  margin: 0 auto;
+  background-color: plum;
+  top: 100%;
+  left: -51.5%;
+}

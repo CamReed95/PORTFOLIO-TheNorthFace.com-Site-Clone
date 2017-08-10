@@ -205,9 +205,8 @@
   }
 }
 
-
 /*DESKTOP VIEW*/
-@media(min-width: 1300px) {
+@media(min-width: 1000px) {
 
   .mobileViewContent {
     display: none;
@@ -217,26 +216,33 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    min-height: 70vh;
   }
 
   .desktopViewContent {
     display: flex;
     justify-content: center;
-    width: 60%;
-    min-height: 70vh;
+    width: 100%;
+    height: 100%;
     margin-top: 7.5vh;
-    /*background-color: lime;*/
   }
 
   .desktopLeft {
-    height: 633.25px;
-    width: 542.3px;
+    height: auto;
+    width: 60%;
     margin-right: 0.5em;
-    /*background-color: plum;*/
+    text-align: center;
+  }
+
+  .detailImg {
+    width: auto;
+    height: 85%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .desktopRight {
-    height: 100%;
+    height: auto;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -244,7 +250,7 @@
 
   .detailProductInfo {
     width: 100%;
-    height: 19.5%;
+    height: auto;
     align-items: flex-start;
     margin: 0;
     text-align: left;
@@ -261,7 +267,7 @@
 
   .colorSwap {
     width: 100%;
-    height: 20%;
+    height: auto;
     border-top: 1px solid #E3E3E3;
     border-bottom: 1px solid #E3E3E3;
     margin-bottom: 0;
@@ -277,7 +283,6 @@
     padding: 1.5em 0;
   }
 
-
   .detailThumbnails {
     width: 100%;
     height: 60px;
@@ -288,13 +293,13 @@
   }
 
   .detailThumbnails img {
-    height: 100%;
+    height: 90%;
     width: auto;
     margin: 0 10px;
   }
 
   .sizesDisplay {
-    height: 20%;
+    height: auto;
     margin-bottom: 2em;
     border-bottom: 1px solid #E3E3E3;
   }
@@ -359,6 +364,32 @@
     font-weight: 900;
     text-align: center;
     color: white;
+  }
+
+}
+
+@media(min-width: 1300px) {
+
+  .detailedViewContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 70vh;
+  }
+
+  .desktopViewContent {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    margin-top: 7.5vh;
+  }
+
+  .detailImg {
+    width: auto;
+    height: 75%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }

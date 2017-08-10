@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { getProductById } from './../../services/axiosServices';
 import './detailedView.css';
 
@@ -43,48 +44,110 @@ componentWillReceiveProps(newProps) {
 
     return (
       <div className="detailedViewContainer">
-        <div className="detailProductInfo">
-          <h1>{this.state.product.name}</h1>
-          <h1>${this.state.product.price}.00</h1>
-        </div>
 
-        <img src={this.state.displayImg} className="detailImg" alt="product"/>
 
-        <div className="colorSwap">
-          <div className="detailImgColor">
-            {this.state.displayImgColor}
+      <div className="mobileViewContent">
+            <div className="detailProductInfo">
+              <h1>{this.state.product.name}</h1>
+              <h1>${this.state.product.price}.00</h1>
+            </div>
+
+            <img src={this.state.displayImg} className="detailImg" alt="product"/>
+
+            <div className="colorSwap">
+              <div className="detailImgColor">
+                {this.state.displayImgColor}
+              </div>
+              <div className="detailThumbnails">
+              {this.state.product.img1 ? <img src={this.state.product.img1} alt="product thumbnail" onClick={ ()=> {
+                this.setState({ displayImg: this.state.product.img1, displayImgColor: this.state.product.color1 })
+              }}/> :''}
+
+              {this.state.product.img2 ? <img src={this.state.product.img2} alt="product thumbnail" onClick={ ()=> {
+                this.setState({ displayImg: this.state.product.img2, displayImgColor: this.state.product.color2 })
+              }}/> :''}
+
+              {this.state.product.img3 ? <img src={this.state.product.img3} alt="product thumbnail" onClick={ ()=> {
+                this.setState({ displayImg: this.state.product.img3, displayImgColor: this.state.product.color3 })
+              }}/> :''}
+
+              {this.state.product.img4 ? <img src={this.state.product.img4} alt="product thumbnail" onClick={ ()=> {
+                this.setState({ displayImg: this.state.product.img4, displayImgColor: this.state.product.color4 })
+              }}/> :''}
+              </div>
+            </div>
+
+            <div className="sizesDisplay">
+              <h1 className="selectedSize">
+                SIZE - {this.state.selectedSize}
+              </h1>
+              <div className="sizesContainer">
+                {productSizes}
+              </div>
+            </div>
+
+            <div className="addToCartButton">
+            <Link to="#">
+              <h2>ADD TO CART</h2>
+            </Link>
+            </div>
           </div>
-          <div className="detailThumbnails">
-          {this.state.product.img1 ? <img src={this.state.product.img1} alt="product thumbnail" onClick={ ()=> {
-            this.setState({ displayImg: this.state.product.img1, displayImgColor: this.state.product.color1 })
-          }}/> :''}
 
-          {this.state.product.img2 ? <img src={this.state.product.img2} alt="product thumbnail" onClick={ ()=> {
-            this.setState({ displayImg: this.state.product.img2, displayImgColor: this.state.product.color2 })
-          }}/> :''}
 
-          {this.state.product.img3 ? <img src={this.state.product.img3} alt="product thumbnail" onClick={ ()=> {
-            this.setState({ displayImg: this.state.product.img3, displayImgColor: this.state.product.color3 })
-          }}/> :''}
 
-          {this.state.product.img4 ? <img src={this.state.product.img4} alt="product thumbnail" onClick={ ()=> {
-            this.setState({ displayImg: this.state.product.img4, displayImgColor: this.state.product.color4 })
-          }}/> :''}
+          <div className="desktopViewContent">
+            <section className="desktopLeft">
+              <img src={this.state.displayImg} className="detailImg" alt="product"/>
+            </section>
+
+            <section className="desktopRight">
+              <div className="detailProductInfo">
+                <h1>{this.state.product.name}</h1>
+                <h1>${this.state.product.price}.00</h1>
+              </div>
+
+              <div className="colorSwap">
+                <div className="detailImgColor">
+                  {this.state.displayImgColor}
+                </div>
+                <div className="detailThumbnails">
+                {this.state.product.img1 ? <img src={this.state.product.img1} alt="product thumbnail" onClick={ ()=> {
+                  this.setState({ displayImg: this.state.product.img1, displayImgColor: this.state.product.color1 })
+                }}/> :''}
+
+                {this.state.product.img2 ? <img src={this.state.product.img2} alt="product thumbnail" onClick={ ()=> {
+                  this.setState({ displayImg: this.state.product.img2, displayImgColor: this.state.product.color2 })
+                }}/> :''}
+
+                {this.state.product.img3 ? <img src={this.state.product.img3} alt="product thumbnail" onClick={ ()=> {
+                  this.setState({ displayImg: this.state.product.img3, displayImgColor: this.state.product.color3 })
+                }}/> :''}
+
+                {this.state.product.img4 ? <img src={this.state.product.img4} alt="product thumbnail" onClick={ ()=> {
+                  this.setState({ displayImg: this.state.product.img4, displayImgColor: this.state.product.color4 })
+                }}/> :''}
+                </div>
+              </div>
+
+              <div className="sizesDisplay">
+                <h1 className="selectedSize">
+                  SIZE - {this.state.selectedSize}
+                </h1>
+                <div className="sizesContainer">
+                  {productSizes}
+                </div>
+              </div>
+
+              <h3 className="freeShipping">
+                FREE 3-DAY SHIPPING
+              </h3>
+              <div className="addToCartButton">
+                <Link to="#">
+                  <h2>ADD TO CART</h2>
+                </Link>
+              </div>
+            </section>
           </div>
-        </div>
-
-        <div className="sizesDisplay">
-          <h1 className="selectedSize">
-            SIZE - {this.state.selectedSize}
-          </h1>
-          <div className="sizesContainer">
-            {productSizes}
-          </div>
-        </div>
-
-        <div className="addToCartButton">
-          <h2>ADD TO CART</h2>
-        </div>
       </div>
     )
   }

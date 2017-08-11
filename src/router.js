@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import Homepage from './components/Homepage/Homepage';
 import ProductsByGender from './components/ProductsByGender/ProductsByGender';
 import Backpacks from './components/Backpacks/Backpacks';
-
 import Explore from './components/Explore/Explore';
 import ProductsByCategory from './components/ProductsByCategory/ProductsByCategory';
 import DetailedView from './components/DetailedView/DetailedView';

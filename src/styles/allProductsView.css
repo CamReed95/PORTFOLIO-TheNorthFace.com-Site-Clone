@@ -16,7 +16,15 @@
 }
 
 .limitedProductContainer {
-  background-color: plum;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 900;
+  width: 45%;
+  padding-bottom: 0;
+  /*background-color: plum;*/
 }
 
 .breadCrumbs {

@@ -4,26 +4,26 @@ import IndividualProduct from './../IndividualProduct/IndividualProduct';
 import './../../styles/limitCategories.css';
 
 
-export default class LimitOuterwear extends Component {
+export default class LimitShirts extends Component {
   constructor(props){
     super(props);
     this.state={
-      outerwear: []
+      shirts: []
     }
   }
 
   componentDidMount() {
-    getLimitedProducts(this.props.params, 'outerwear', 4).then((response)=>
+    getLimitedProducts(this.props.params, 'shirts', 4).then((response)=>
       this.setState({
-        outerwear: response
+        shirts: response
       })
     );
   }
 
   componentWillReceiveProps(newProps) {
-    getLimitedProducts(newProps.params.gender, 'outerwear', 4).then((response)=>
+    getLimitedProducts(newProps.params.gender, 'shirts', 4).then((response)=>
       this.setState({
-        outerwear: response
+        shirts: response
       })
     );
   }
@@ -32,7 +32,7 @@ export default class LimitOuterwear extends Component {
 
       console.log(this.props.params)
 
-      let outerwearLimit = this.state.outerwear.map( (product, index, arr) => {
+      let shirtsLimit = this.state.shirts.map( (product, index, arr) => {
         return (
           <IndividualProduct key={product.product_id} id={product.product_id} product={product} containerStyle={ 'limitedProductContainer' }/>
         )
@@ -41,7 +41,7 @@ export default class LimitOuterwear extends Component {
       return (
       <div>
         <div className="limitCategoryContainer">
-          {outerwearLimit}
+          {shirtsLimit}
         </div>
       </div>
     )

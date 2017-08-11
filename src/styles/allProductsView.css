@@ -152,6 +152,10 @@
     font-size: 1.15em;
   }
 
+  .limitedProductContainer {
+    width: 40%;
+  }
+
 }
 
 
@@ -164,6 +168,10 @@
   }
 
   .productsContainer {
+    width: 25%;
+  }
+
+  .limitedProductContainer {
     width: 25%;
   }
 

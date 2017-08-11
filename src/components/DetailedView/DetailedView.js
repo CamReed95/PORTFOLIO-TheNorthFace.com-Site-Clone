@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getProductById } from './../../services/axiosServices';
 import './detailedView.css';
+import { connect } from 'react-redux';
 
 
 class DetailedView extends Component {
@@ -14,10 +15,14 @@ class DetailedView extends Component {
       sizesArr: [],
       selectedSize: ''
     }
+
+    this.addToCart = this.addToCart.bind(this);
+
   }
 
 componentDidMount() {
   console.log("DETAILED VIEW MOUNTED")
+  console.log(this.state.product)
 getProductById(this.props.match.params.product_id).then( product => {
   this.setState({product: product[0], displayImg: product[0].img1, sizesArr: product[0].sizes.split(','), displayImgColor: product[0].color1 })
   console.log(this.state.product);
@@ -151,5 +156,3 @@ componentWillReceiveProps(newProps) {
     )
   }
 }
-
-export default DetailedView;

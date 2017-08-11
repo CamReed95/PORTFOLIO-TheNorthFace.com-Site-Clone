@@ -15,7 +15,7 @@ export default function Homepage (props) {
               <h1>BUILT TO LAST</h1>
               <h2>Backed by a Lifetime Warranty.</h2>
               <div className="button">
-                <Link to='/backpacks'>
+                <Link to='/shop/backpacks'>
                   <h3>FIND THE PERFECT PACK</h3>
                 </Link>
               </div>

@@ -63,6 +63,14 @@
 }
 
 @media(min-width: 700px){
+
+  .limitBreadcrumb {
+    padding-bottom: .75em;
+    padding-top: 1em;
+    border-bottom: none;
+
+  }
+
   .limitBreadcrumb h1 {
     font-size: 3em;
   }
@@ -84,13 +92,8 @@
   }
 
   .limitBreadcrumb {
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: baseline;
     margin-left: 1.25em;
     border-bottom: none;
-    padding-bottom: .75em;
   }
 
   .limitBreadcrumb a {

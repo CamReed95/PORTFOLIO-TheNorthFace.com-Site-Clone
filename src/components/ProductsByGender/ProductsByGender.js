@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './productsByGender.css';
 import { getLimitedProducts } from './../../services/axiosServices';
 import LimitOuterwear from './../LimitOuterwear/LimitOuterwear';
 import LimitShirts from './../LimitShirts/LimitShirts';
@@ -9,14 +8,7 @@ import LimitBackpacks from './../LimitBackpacks/LimitBackpacks';
 
 
 
-export default class Mens extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-      backpacks: []
-    }
-
-  }
+export default class ProductsByGender extends Component {
 
   componentDidMount() {
     let urlGenderParam = this.props.match.params.gender;

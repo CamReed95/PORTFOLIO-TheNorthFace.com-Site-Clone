@@ -80,7 +80,6 @@ export default class Mens extends Component {
 
     return (
       <div className="contentContainer">
-      <h1>I AM THE PRODUCTS BY GENDER COMPONENT</h1>
       <LimitOuterwear params={this.props.match.params}/>
       <LimitShirts params={this.props.match.params}/>
       <LimitBottoms params={this.props.match.params}/>

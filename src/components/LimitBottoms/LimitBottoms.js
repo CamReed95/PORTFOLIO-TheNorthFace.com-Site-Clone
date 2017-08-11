@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getLimitedProducts } from './../../services/axiosServices';
 import IndividualProduct from './../IndividualProduct/IndividualProduct';
 import './../../styles/limitCategories.css';
+import { Link } from 'react-router-dom';
 
 
 export default class LimitBottoms extends Component {
@@ -39,11 +40,19 @@ export default class LimitBottoms extends Component {
       })
 
       return (
-      <div>
-        <div className="limitCategoryContainer">
-          {bottomsLimit}
+        <div>
+          <div className="limitCategoryContainer">
+            <div className="limitBreadcrumb">
+              <h1>BOTTOMS</h1>
+              <Link to={  `/${this.props.params.gender}/bottoms`}>
+                <h2>VIEW ALL <span className="rightArrow"> > </span> </h2>
+              </Link>
+            </div>
+            <div className="limitProductsDisplay">
+              {bottomsLimit}
+            </div>
+          </div>
         </div>
-      </div>
     )
   }
 }

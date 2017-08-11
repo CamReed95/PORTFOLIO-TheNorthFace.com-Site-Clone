@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getLimitedProducts } from './../../services/axiosServices';
 import IndividualProduct from './../IndividualProduct/IndividualProduct';
 import './../../styles/limitCategories.css';
+import { Link } from 'react-router-dom';
 
 
 export default class LimitOuterwear extends Component {
@@ -41,7 +42,15 @@ export default class LimitOuterwear extends Component {
       return (
       <div>
         <div className="limitCategoryContainer">
-          {outerwearLimit}
+          <div className="limitBreadcrumb">
+            <h1>OUTERWEAR</h1>
+            <Link to={  `/${this.props.params.gender}/outerwear`}>
+              <h2>VIEW ALL <span className="rightArrow"> > </span> </h2>
+            </Link>
+          </div>
+          <div className="limitProductsDisplay">
+            {outerwearLimit}
+          </div>
         </div>
       </div>
     )

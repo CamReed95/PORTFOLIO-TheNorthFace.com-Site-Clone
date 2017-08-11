@@ -45,7 +45,7 @@ componentWillReceiveProps(newProps) {
         <div className="breadCrumbs">
           <p><Link to="/">HOME</Link></p>
           <p>/</p>
-          <p><Link to={`/${this.props.match.params.gender}`}>{this.props.match.params.gender.toUpperCase()}</Link></p>
+          <p><Link to={`/shop/${this.props.match.params.gender}`}>{this.props.match.params.gender.toUpperCase()}</Link></p>
           <h3>/ /</h3>
           <h3 className="currPage">{this.props.match.params.category.toUpperCase()}</h3>
         </div>

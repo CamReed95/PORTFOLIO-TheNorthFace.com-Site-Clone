@@ -18,7 +18,6 @@ class DetailedView extends Component {
 
 componentDidMount() {
   console.log("DETAILED VIEW MOUNTED")
-
 getProductById(this.props.match.params.product_id).then( product => {
   this.setState({product: product[0], displayImg: product[0].img1, sizesArr: product[0].sizes.split(','), displayImgColor: product[0].color1 })
   console.log(this.state.product);

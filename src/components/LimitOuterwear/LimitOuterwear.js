@@ -31,7 +31,6 @@ export default class LimitOuterwear extends Component {
 
     render(){
 
-      console.log(this.props.params)
 
       let outerwearLimit = this.state.outerwear.map( (product, index, arr) => {
         return (
@@ -40,17 +39,15 @@ export default class LimitOuterwear extends Component {
       })
 
       return (
-      <div>
-        <div className="limitCategoryContainer">
-          <div className="limitBreadcrumb">
-            <h1>OUTERWEAR</h1>
-            <Link to={  `/${this.props.params.gender}/outerwear`}>
-              <h2>VIEW ALL <span className="rightArrow"> > </span> </h2>
-            </Link>
-          </div>
-          <div className="limitProductsDisplay">
-            {outerwearLimit}
-          </div>
+      <div className="limitCategoryContainer">
+        <div className="limitBreadcrumb">
+          <h1>OUTERWEAR</h1>
+          <Link to={  `/shop/${this.props.params.gender}/outerwear`}>
+            <h2>VIEW ALL <span className="rightArrow"> > </span> </h2>
+          </Link>
+        </div>
+        <div className="limitProductsDisplay">
+          {outerwearLimit}
         </div>
       </div>
     )

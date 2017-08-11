@@ -31,7 +31,6 @@ export default class LimitHats extends Component {
 
     render(){
 
-      console.log(this.props.params)
 
       let hatsLimit = this.state.hats.map( (product, index, arr) => {
         return (
@@ -40,17 +39,15 @@ export default class LimitHats extends Component {
       })
 
       return (
-        <div>
-          <div className="limitCategoryContainer">
-            <div className="limitBreadcrumb">
-              <h1>HATS</h1>
-              <Link to={  `/${this.props.params.gender}/hats`}>
-                <h2>VIEW ALL<span className="rightArrow"> > </span> </h2>
-              </Link>
-            </div>
-            <div className="limitProductsDisplay">
-              {hatsLimit}
-            </div>
+        <div className="limitCategoryContainer">
+          <div className="limitBreadcrumb">
+            <h1>HATS</h1>
+            <Link to={  `/shop/${this.props.params.gender}/hats`}>
+              <h2>VIEW ALL<span className="rightArrow"> > </span> </h2>
+            </Link>
+          </div>
+          <div className="limitProductsDisplay">
+            {hatsLimit}
           </div>
         </div>
     )

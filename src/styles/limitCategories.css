@@ -1,11 +1,23 @@
+/*.limitContentContainer {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: plum;
+}*/
+
+
+
 .limitCategoryContainer {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #E3E3E3;
-  margin: 2em 0 1em 0;
-  /*background-color: lime;*/
+  align-items: flex-start;
+  border-top: 1px solid #E3E3E3;
+  margin: 0 0 1em 0;
+  padding-top: 2em;
 }
 
 .limitBreadcrumb {
@@ -13,32 +25,86 @@
   height: auto;
   display: flex;
   align-items: baseline;
+  margin-left: 1.25em;
+  border-bottom: 1px solid #E3E3E3;
+  padding-bottom: .75em;
 }
 
-.limitBreadcrumb a {
-  text-decoration-line: none;
+.limitBreadcrumb a, .limitBreadcrumb a:visited {
+  text-decoration: none;
+  color: red;
 }
 
 .limitBreadcrumb h1 {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 900;
   margin-right: .4em;
 }
 
 .limitBreadcrumb h2 {
-  font-size: 1.75em;
-  font-weight: 900;
+  font-size: 1em;
+  font-weight: 700;
   color: red;
 }
 
 .rightArrow {
-  margin-left: .45em;
+  margin-left: .25em;
   font-weight: 400;
+  font-weight: 700;
 }
 
 .limitProductsDisplay {
   width: 100%;
   height: auto;
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin-top: 2em;
+}
+
+
+@media(min-width: 1300px) {
+  /*.limitCategoryContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #E3E3E3;
+    margin: 2em 0 1em 0;
+  }*/
+
+  /*.limitBreadcrumb {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: baseline;
+  }*/
+
+  .limitBreadcrumb a {
+    text-decoration-line: none;
+  }
+
+  .limitBreadcrumb h1 {
+    font-size: 3em;
+    font-weight: 900;
+    margin-right: .4em;
+  }
+
+  .limitBreadcrumb h2 {
+    font-size: 1.75em;
+    font-weight: 900;
+    color: red;
+  }
+
+  .rightArrow {
+    margin-left: .45em;
+    font-weight: 400;
+  }
+
+  .limitProductsDisplay {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 2em;
+  }
 }

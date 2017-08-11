@@ -11,7 +11,7 @@ export default (
   <Switch>
     <Route exact path="/" component={ Homepage } />
     <Route exact path="/shop/:gender" component={ ProductsByGender } />
-    <Route path="/:gender/:category" component={ ProductsByCategory } />
+    <Route exact path="/shop/:gender/:category" component={ ProductsByCategory } />
     <Route path="/backpacks" component={ Backpacks } />
     <Route path="/explore" component={ Explore } />
     <Route path="/product/:product_id" component={ DetailedView } />

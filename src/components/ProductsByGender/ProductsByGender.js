@@ -18,6 +18,34 @@ export default class Mens extends Component {
 
   }
 
+  componentDidMount() {
+    // getLimitedProducts(this.props.match.params.gender, 'outerwear', 4).then((response)=>
+    //   this.setState({
+    //     outerwear: response
+    //   })
+    // );
+    getLimitedProducts(this.props.match.params.gender, 'shirts', 4).then((response)=>
+      this.setState({
+        shirts: response
+      })
+    );
+    getLimitedProducts(this.props.match.params.gender, 'bottoms', 4).then((response)=>
+      this.setState({
+        bottoms: response
+      })
+    );
+    getLimitedProducts(this.props.match.params.gender, 'hats', 4).then((response)=>
+      this.setState({
+        hats: response
+      })
+    );
+    getLimitedProducts(this.props.match.params.gender, 'backpacks', 4).then((response)=>
+      this.setState({
+        backpacks: response
+      })
+    );
+  }
+
   componentWillReceiveProps(newProps) {
     // getLimitedProducts(newProps.match.params.gender, 'outerwear', 4).then((response)=>
     //   this.setState({
@@ -47,34 +75,6 @@ export default class Mens extends Component {
 
   }
 
-componentDidMount() {
-  // getLimitedProducts(this.props.match.params.gender, 'outerwear', 4).then((response)=>
-  //   this.setState({
-  //     outerwear: response
-  //   })
-  // );
-  getLimitedProducts(this.props.match.params.gender, 'shirts', 4).then((response)=>
-    this.setState({
-      shirts: response
-    })
-  );
-  getLimitedProducts(this.props.match.params.gender, 'bottoms', 4).then((response)=>
-    this.setState({
-      bottoms: response
-    })
-  );
-  getLimitedProducts(this.props.match.params.gender, 'hats', 4).then((response)=>
-    this.setState({
-      hats: response
-    })
-  );
-  getLimitedProducts(this.props.match.params.gender, 'backpacks', 4).then((response)=>
-    this.setState({
-      backpacks: response
-    })
-  );
-}
-
 
   render() {
 
@@ -91,7 +91,7 @@ componentDidMount() {
     return (
       <div className="contentContainer">
       <h1>I AM THE MENS COMPONENT</h1>
-      <LimitOuterwear />
+      <LimitOuterwear params={this.props.match.params}/>
       {/*{outerwearLimit}*/}
       </div>
     )

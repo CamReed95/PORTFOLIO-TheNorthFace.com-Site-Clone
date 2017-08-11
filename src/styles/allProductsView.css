@@ -15,6 +15,10 @@
   padding-bottom: 10vh;
 }
 
+.limitedProductContainer {
+  background-color: plum;
+}
+
 .breadCrumbs {
   display: flex;
   justify-content: flex-start;

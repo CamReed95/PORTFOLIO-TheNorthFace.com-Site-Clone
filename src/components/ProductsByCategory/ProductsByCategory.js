@@ -36,7 +36,7 @@ componentWillReceiveProps(newProps) {
 
     const allProducts = this.state.products.map( (product, index, arr) => {
       return (
-        <IndividualProduct key={product.product_id} id={product.product_id} product={product} />
+        <IndividualProduct key={product.product_id} id={product.product_id} product={product} containerStyle={ 'productsContainer' }/>
       )
     } )
 

@@ -13,7 +13,7 @@ class IndividualProduct extends Component {
 
   render() {
     return (
-      <div key={this.props.id} className="productsContainer">
+      <div key={this.props.id} className={this.props.containerStyle}>
         <img src={this.state.displayImg} className="productImg" alt="Product"/>
 
         <div className="thumbnails">

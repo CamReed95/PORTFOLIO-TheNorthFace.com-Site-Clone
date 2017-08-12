@@ -10,8 +10,8 @@ class DetailedView extends Component {
     super(props);
     this.state = {
       product: {},
-      displayImg: '',
-      displayImgColor: '',
+      displayImg: this.props.selectedImg,
+      displayImgColor: this.props.selectedImgColor,
       sizesArr: [],
       selectedSize: ''
     }
@@ -20,16 +20,14 @@ class DetailedView extends Component {
 
 
 componentDidMount() {
-  console.log("DETAILED VIEW MOUNTED")
-  console.log(this.props)
 getProductById(this.props.match.params.product_id).then( product => {
-  this.setState({product: product[0], displayImg: product[0].img1, sizesArr: product[0].sizes.split(','), displayImgColor: product[0].color1 })
+  this.setState({product: product[0], sizesArr: product[0].sizes.split(',')})
   });
 }
 
 componentWillReceiveProps(newProps) {
   getProductById(newProps.match.params.product_id).then( product => {
-    this.setState({product: product[0], displayImg: product[0].img1, sizesArr: product[0].sizes.split(','), displayImgColor: product[0].color1 })
+    this.setState({product: product[0], sizesArr: product[0].sizes.split(',')})
     });
 }
 
@@ -86,7 +84,7 @@ componentWillReceiveProps(newProps) {
               </div>
             </div>
 
-            <div className="addToCartButton" onClick={()=>this.props.addToCart(this.state)}>
+            <div className="addToCartButton" onClick={()=> this.state.selectedSize ? this.props.addToCart(this.state) : alert("Please select size before adding item to cart.")}>
               <h2>ADD TO CART</h2>
             </div>
           </div>
@@ -140,7 +138,7 @@ componentWillReceiveProps(newProps) {
                 FREE 3-DAY SHIPPING
               </h3>
 
-              <div className="addToCartButton" onClick={()=>this.props.addToCart(this.state)}>
+              <div className="addToCartButton" onClick={()=> this.state.selectedSize ? this.props.addToCart(this.state) : alert("Please select size before adding item to cart.")}>
                 <h2>ADD TO CART</h2>
               </div>
 
@@ -151,5 +149,11 @@ componentWillReceiveProps(newProps) {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    selectedImg: state.detailedViewImg,
+    selectedImgColor: state.detailViewImgName
+  }
+}
 
-export default connect(null, { addToCart })(DetailedView);
+export default connect(mapStateToProps, { addToCart })(DetailedView);

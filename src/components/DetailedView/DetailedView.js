@@ -50,11 +50,11 @@ componentWillReceiveProps(newProps) {
               <h1>${this.state.product.price}.00</h1>
             </div>
 
-            <img src={this.state.displayImg} className="detailImg" alt="product"/>
+            <img src={this.state.displayImg ? this.state.displayImg : this.state.product.img1} className="detailImg" alt="product"/>
 
             <div className="colorSwap">
               <div className="detailImgColor">
-                {this.state.displayImgColor}
+                {this.state.displayImgColor ? this.state.displayImgColor : this.state.product.color1}
               </div>
               <div className="detailThumbnails">
               {this.state.product.img1 ? <img src={this.state.product.img1} alt="product thumbnail" onClick={ ()=> {
@@ -93,7 +93,7 @@ componentWillReceiveProps(newProps) {
 
           <div className="desktopViewContent">
             <section className="desktopLeft">
-              <img src={this.state.displayImg} className="detailImg" alt="product"/>
+              <img src={this.state.displayImg ? this.state.displayImg : this.state.product.img1} className="detailImg" alt="product"/>
             </section>
 
             <section className="desktopRight">
@@ -104,7 +104,7 @@ componentWillReceiveProps(newProps) {
 
               <div className="colorSwap">
                 <div className="detailImgColor">
-                  {this.state.displayImgColor}
+                  {this.state.displayImgColor ? this.state.displayImgColor : this.state.product.color1}
                 </div>
                 <div className="detailThumbnails">
                 {this.state.product.img1 ? <img src={this.state.product.img1} alt="product thumbnail" onClick={ ()=> {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getLimitedProducts } from './../../services/axiosServices';
 import IndividualProduct from './../IndividualProduct/IndividualProduct';
 import './../../styles/limitCategories.css';
+import './backpacks.css';
 import { Link } from 'react-router-dom';
 
 
@@ -43,6 +44,7 @@ export default class Backpacks extends Component {
         <IndividualProduct key={product.product_id} id={product.product_id} product={product} containerStyle={ 'limitedProductContainer' }/>
       )
     })
+
 
     return (
       <div className="limitContentContainer">

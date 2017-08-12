@@ -43,7 +43,7 @@ export default class LimitBottoms extends Component {
           <div className="limitBreadcrumb">
             <h1>BOTTOMS</h1>
             <Link to={  `/shop/${this.props.params.gender}/bottoms`}>
-              <h2>VIEW ALL <span className="rightArrow"> > </span> </h2>
+              <h2>VIEW ALL ({this.state.bottoms.length * 4}) <span className="rightArrow"> > </span> </h2>
             </Link>
           </div>
           <div className="limitProductsDisplay">

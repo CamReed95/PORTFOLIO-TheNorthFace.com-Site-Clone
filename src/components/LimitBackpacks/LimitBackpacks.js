@@ -30,20 +30,19 @@ export default class LimitBackpacks extends Component {
 
     render(){
 
-
-
       let backpacksLimit = this.state.backpacks.map( (product, index, arr) => {
         return (
           <IndividualProduct key={product.product_id} id={product.product_id} product={product} containerStyle={ 'limitedProductContainer' }/>
         )
       })
 
+
       return (
         <div className="limitCategoryContainer">
           <div className="limitBreadcrumb">
             <h1>BACKPACKS</h1>
             <Link to={  `/shop/${this.props.params.gender}/backpacks`}>
-              <h2>VIEW ALL <span className="rightArrow"> > </span> </h2>
+              <h2>VIEW ALL ({this.state.backpacks.length * 4})<span className="rightArrow"> >  </span> </h2>
             </Link>
           </div>
           <div className="limitProductsDisplay">

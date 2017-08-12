@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './header.css';
 import NavBar from './../NavBar/NavBar';
 import DropdownMenu from './../DropdownMenu/DropdownMenu';
+import { connect } from 'react-redux';
 
 
 class Header extends Component {
@@ -40,7 +41,13 @@ toggleMenu() {
           </div>
 
           <div className="mobileNavIcons">
-            <img className="cartIcon"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png" alt="Cart icon" />
+            <div className="cartAndCount">
+              <div className="cartItemsCount">
+                <p className="cartCount">
+                {this.props.cart.length}</p>
+              </div>
+              <img className="cartIcon"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png" alt="Cart icon" />
+            </div>
             <div className="hamIcon" onClick={ this.toggleMenu } >
               <div className="hamRow"></div>
               <div className="hamRow"></div>
@@ -58,4 +65,10 @@ toggleMenu() {
   }
 }
 
-export default Header;
+function mapStateToProps(state) {
+  return {
+    cart: state.cart
+  }
+}
+
+export default connect(mapStateToProps)(Header);

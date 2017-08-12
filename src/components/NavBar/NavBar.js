@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import DesktopDropdownMenu from './../DropdownMenu/DesktopDropdownMenu';
+import { connect } from 'react-redux';
 
-export default class NavBar extends Component{
+class NavBar extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -47,7 +48,7 @@ export default class NavBar extends Component{
         <ul className="userLinks">
           <li>Find a Store</li>
           <li>Sign In</li>
-          <li className="cartButton">Cart</li>
+          <li className="cartButton">Cart ({this.props.cart.length})</li>
         </ul>
         <ul className="navLinks">
             <li onMouseEnter={ this.toggleMenu } onMouseLeave={ this.toggleMenu }>{"MEN'S"}</li>
@@ -65,3 +66,11 @@ export default class NavBar extends Component{
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    cart: state.cart
+  }
+}
+
+export default connect(mapStateToProps)(NavBar)

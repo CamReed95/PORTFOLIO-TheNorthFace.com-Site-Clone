@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { getProductById } from './../../services/axiosServices';
 import './detailedView.css';
 import { connect } from 'react-redux';
+import { addToCart } from './../../ducks/reducer';
 
 
 class DetailedView extends Component {
@@ -16,24 +17,20 @@ class DetailedView extends Component {
       selectedSize: ''
     }
 
-    this.addToCart = this.addToCart.bind(this);
-
   }
+
 
 componentDidMount() {
   console.log("DETAILED VIEW MOUNTED")
-  console.log(this.state.product)
+  console.log(this.props)
 getProductById(this.props.match.params.product_id).then( product => {
   this.setState({product: product[0], displayImg: product[0].img1, sizesArr: product[0].sizes.split(','), displayImgColor: product[0].color1 })
-  console.log(this.state.product);
   });
 }
 
 componentWillReceiveProps(newProps) {
-  console.log("PROPS, DUDE!")
   getProductById(newProps.match.params.product_id).then( product => {
     this.setState({product: product[0], displayImg: product[0].img1, sizesArr: product[0].sizes.split(','), displayImgColor: product[0].color1 })
-    console.log(this.state.product);
     });
 }
 
@@ -90,10 +87,8 @@ componentWillReceiveProps(newProps) {
               </div>
             </div>
 
-            <div className="addToCartButton">
-            <Link to="#">
+            <div className="addToCartButton" onClick={()=>this.props.addToCart(this.state)}>
               <h2>ADD TO CART</h2>
-            </Link>
             </div>
           </div>
 
@@ -145,14 +140,17 @@ componentWillReceiveProps(newProps) {
               <h3 className="freeShipping">
                 FREE 3-DAY SHIPPING
               </h3>
-              <div className="addToCartButton">
-                <Link to="#">
-                  <h2>ADD TO CART</h2>
-                </Link>
+
+              <div className="addToCartButton" onClick={()=>this.props.addToCart(this.state)}>
+                <h2>ADD TO CART</h2>
               </div>
+
             </section>
           </div>
       </div>
     )
   }
 }
+
+
+export default connect(null, { addToCart })(DetailedView);

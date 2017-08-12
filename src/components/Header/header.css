@@ -70,6 +70,28 @@ body {
   margin-right: 1.8em;
 }
 
+.cartAndCount {
+  position: relative;
+}
+
+.cartItemsCount {
+  height: 15px;
+  width: 15px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 18px;
+  top: -5px;
+}
+
+.cartCount {
+  font-size: .75em;
+}
+
 .linksContainer{
   display: none;
 }
@@ -114,6 +136,10 @@ body {
 
   .tnfLogo {
     min-height: 10vh;
+  }
+
+  .cartItemsCount {
+    display: none;
   }
 
 }

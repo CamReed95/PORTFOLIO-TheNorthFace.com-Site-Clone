@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { getProductById } from './../../services/axiosServices';
 import './detailedView.css';
 import { connect } from 'react-redux';

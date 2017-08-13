@@ -5,9 +5,20 @@
 /*IPAD VIEW*/
 
 @media(min-width: 400px) {
+
+  .navBarDesktop{
+    display: none;
+  }
+
+  .navBariPad {
+    display: flex;
+    background-color: lime;
+  }
+
   .navBarContainer{
     display: flex;
     position: relative;
+    width: 100%;
   }
 
   .topNav {
@@ -70,6 +81,16 @@
 /*DESKTOP VIEW*/
 
 @media(min-width: 800px) {
+
+  .navBariPad {
+    display: none;
+  }
+
+  .navBarDesktop {
+    display: flex;
+    width: 100%;
+    background-color: plum;
+  }
 
   .userLinks {
       font-size: 0.8em;

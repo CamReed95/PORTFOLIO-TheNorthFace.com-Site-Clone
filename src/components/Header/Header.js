@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
-import NavBar from './../NavBar/NavBar';
+import NavBarDesktop from './../NavBar/NavBarDesktop';
+import NavBariPad from './../NavBar/NavBariPad';
+
 import DropdownMenu from './../DropdownMenu/DropdownMenu';
 import { connect } from 'react-redux';
 
@@ -56,7 +58,8 @@ toggleMenu() {
           </div>
 
           <div className="linksContainer">
-          <NavBar />
+          <NavBarDesktop />
+          <NavBariPad />
           </div>
         </div>
         <DropdownMenu menuActive={ this.state.menuActive} toggleMenu={this.toggleMenu} />

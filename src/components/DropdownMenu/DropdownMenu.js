@@ -51,7 +51,7 @@ export default class DropdownMenu extends Component {
             <div
             className="submenu"
             style={ this.state.displayMens ? submenuDisplay : null }>
-              <h1 onClick={ this.props.toggleMenu }><Link to="/mens">SHOP ALL {"MEN'S"}</Link></h1>
+              <h1 onClick={ this.props.toggleMenu }><Link to="/shop/mens">SHOP ALL {"MEN'S"}</Link></h1>
               <h1 onClick={ this.props.toggleMenu }><Link to="/shop/mens/outerwear">OUTERWEAR</Link></h1>
               <h1 onClick={ this.props.toggleMenu }><Link to="/shop/mens/shirts">SHIRTS</Link></h1>
               <h1 onClick={ this.props.toggleMenu }><Link to="/shop/mens/bottoms">BOTTOMS</Link></h1>
@@ -66,7 +66,7 @@ export default class DropdownMenu extends Component {
               <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" alt="Down Arrow Icon"/>
             </div>
             <div className="submenu" style={ this.state.displayWomens ? submenuDisplay : null }>
-              <h1 onClick={ this.props.toggleMenu }><Link to="/womens">SHOP ALL {"WOMEN'S"}</Link></h1>
+              <h1 onClick={ this.props.toggleMenu }><Link to="/shop/womens">SHOP ALL {"WOMEN'S"}</Link></h1>
               <h1 onClick={ this.props.toggleMenu }><Link to="/shop/womens/outerwear">OUTERWEAR</Link></h1>
               <h1 onClick={ this.props.toggleMenu }><Link to="/shop/womens/shirts">SHIRTS</Link></h1>
               <h1 onClick={ this.props.toggleMenu }><Link to="/shop/womens/bottoms">BOTTOMS</Link></h1>
@@ -82,9 +82,9 @@ export default class DropdownMenu extends Component {
               <img className="downArrow" src="http://cdn.onlinewebfonts.com/svg/download_144754.png" alt="Down Arrow Icon"/>
             </div>
             <div className="submenu backpacks" style={ this.state.displayBackpacks ? submenuDisplay : null }>
-              <h1>SHOP ALL BACKPACKS</h1>
-              <h1>{"MEN'S"}</h1>
-              <h1>{"WOMEN'S"}</h1>
+              <h1 onClick={ this.props.toggleMenu }><Link to="/backpacks">SHOP ALL BACKPACKS</Link></h1>
+              <h1 onClick={ this.props.toggleMenu }><Link to="/shop/mens/backpacks">{"MEN'S"}</Link></h1>
+              <h1 onClick={ this.props.toggleMenu }><Link to="/shop/womens/backpacks">{"WOMEN'S"}</Link></h1>
             </div>
           </div>
           <div className="dropdownUserLinks">

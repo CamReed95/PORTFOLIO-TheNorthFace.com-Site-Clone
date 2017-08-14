@@ -43,6 +43,8 @@ toggleMenu() {
           </div>
 
           <div className="mobileNavIcons">
+
+          <Link to="/cart">
             <div className="cartAndCount">
               <div className="cartItemsCount">
                 <p className="cartCount">
@@ -50,6 +52,7 @@ toggleMenu() {
               </div>
               <img className="cartIcon"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png" alt="Cart icon" />
             </div>
+          </Link>
             <div className="hamIcon" onClick={ this.toggleMenu } >
               <div className="hamRow"></div>
               <div className="hamRow"></div>

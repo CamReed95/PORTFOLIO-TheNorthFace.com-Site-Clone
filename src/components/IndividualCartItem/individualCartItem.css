@@ -1,0 +1,40 @@
+.cartItemContainer {
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+  background-color: white;
+}
+
+.cartItemSections {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.cartItemLeft {
+  height: 20vh;
+  width: auto;
+  background-color: aquamarine;
+}
+
+.cartItemImg {
+  height: 100%;
+}
+
+.cartItemRight {
+  min-height: 100%;
+  width: auto;
+  padding-left: 1em;
+  background-color: lime;
+}
+
+.removeItemLink {
+  color: red;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  margin: .5em 0;
+}

@@ -6,6 +6,7 @@ import Backpacks from './components/Backpacks/Backpacks';
 import Explore from './components/Explore/Explore';
 import ProductsByCategory from './components/ProductsByCategory/ProductsByCategory';
 import DetailedView from './components/DetailedView/DetailedView';
+import Cart from './components/Cart/Cart';
 
 export default (
   <Switch>
@@ -15,5 +16,6 @@ export default (
     <Route path="/backpacks" component={ Backpacks } />
     <Route path="/explore" component={ Explore } />
     <Route path="/product/:product_id" component={ DetailedView } />
+    <Route path="/cart" component={ Cart } />
   </Switch>
 )

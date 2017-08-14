@@ -4,6 +4,7 @@ import './navbar.css';
 import IPadDropdownMenu from './../DropdownMenu/IPadDropdownMenu';
 import { connect } from 'react-redux';
 
+
 class NavBariPad extends Component{
   constructor(props){
     super(props);
@@ -31,7 +32,9 @@ class NavBariPad extends Component{
             <ul className="userLinks">
               <li>Find a Store</li>
               <li>Sign In</li>
-              <li className="cartButton">Cart ({this.props.cart.length})</li>
+
+              <li className="cartButton"><Link to="/cart">Cart ({this.props.cart.length})</Link></li>
+
             </ul>
             <ul className="navLinks">
                 <li onClick={this.toggleMenu}>{"MEN'S"}</li>

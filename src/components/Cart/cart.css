@@ -1,0 +1,10 @@
+.cartComponentContainer {
+  width: 100%;
+  min-height: 60vh;
+  background-color: #EEEEEE;
+}
+
+.cartContentsContainer {
+  width: 100%;
+  height: 100%;
+}

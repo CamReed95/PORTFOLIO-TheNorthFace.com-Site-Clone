@@ -43,6 +43,12 @@
     list-style: none;
   }
 
+  .userLinks a {
+    text-decoration-line: none;
+    font-weight: 900;
+    color: #2A2A2A;
+  }
+
   .navLinks {
     width: 55%;
     height: 55%;

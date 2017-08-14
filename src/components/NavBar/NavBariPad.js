@@ -1,38 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
-import iPadDropdownMenu from './../DropdownMenu/iPadDropdownMenu';
+import IPadDropdownMenu from './../DropdownMenu/IPadDropdownMenu';
 import { connect } from 'react-redux';
 
 class NavBariPad extends Component{
   constructor(props){
     super(props);
     this.state = {
-      iPadDropdownActive: true
+      dropdownActive: true
     }
 
     this.toggleMenu = this.toggleMenu.bind(this);
 
   }
 
+
   toggleMenu() {
     this.setState({
-      iPadDropdownActive: !this.state.iPadDropdownActive
+      dropdownActive: !this.state.dropdownActive
     })
   }
 
-  enterMenu() {
-    this.setState({
-      iPadDropdownActive: false
-    })
-  }
-
-  exitMenu() {
-    this.setState({
-      iPadDropdownActive: true
-    })
-
-  }
 
   render() {
     return (
@@ -45,19 +34,18 @@ class NavBariPad extends Component{
               <li className="cartButton">Cart ({this.props.cart.length})</li>
             </ul>
             <ul className="navLinks">
-                <li onClick={ this.toggleMenu }>{"MEN'S"}</li>
-                <li><Link to="/womens">{"WOMEN'S"}</Link></li>
-                <li><Link to="/backpacks">BACKPACKS</Link></li>
+                <li onClick={this.toggleMenu}>{"MEN'S"}</li>
+                <li onClick={this.toggleMenu}>{"WOMEN'S"}</li>
+                <li onClick={this.toggleMenu}>BACKPACKS</li>
                 <li><Link to="/explore">EXPLORE</Link></li>
             </ul>
-
           </div>
-          <div>
-            <iPadDropdownMenu dropdownActive={ this.state.iPadDropdownActive } onMouseEnter={ this.enterMenu } onMouseLeave={ this.exitMenu }/>
+
+          <div className="iPadDropdownInstanceContainer">
+            <IPadDropdownMenu dropdownActive={ this.state.dropdownActive } toggleMenu={this.toggleMenu}/>
           </div>
 
         </div>
-
       </div>
     )
   }

@@ -8,7 +8,7 @@ class NavBar extends Component{
   constructor(props){
     super(props);
     this.state = {
-      dropdownActive: true//Change to true after styling dropdown
+      dropdownActive: true
     }
 
     this.toggleMenu = this.toggleMenu.bind(this);
@@ -50,19 +50,23 @@ class NavBar extends Component{
 
 
               <ul className="navLinks">
-                  <li onMouseEnter={ this.enterMenu } onMouseLeave={ this.leaveMenu } onClick={this.toggleMenu}><Link to="/shop/mens">{"MEN'S"}</Link><div className="hoverBridge" onMouseEnter={this.enterMenu}></div></li>
+                  <li onClick={this.toggleMenu} onMouseEnter={this.enterMenu}
+                  onMouseLeave={this.leaveMenu}><Link to="/shop/mens">{"MEN'S"}</Link><div className="hoverBridge" onMouseEnter={this.enterMenu}></div></li>
 
-                  <li onMouseEnter={ this.enterMenu } onMouseLeave={ this.leaveMenu } onClick={this.toggleMenu}><Link to="/shop/womens">{"WOMEN'S"}</Link><div className="hoverBridgeWomens" onMouseEnter={this.enterMenu}></div></li>
+                  <li onClick={this.toggleMenu} onMouseEnter={this.enterMenu}
+                  onMouseLeave={this.leaveMenu}><Link to="/shop/womens">{"WOMEN'S"}</Link><div className="hoverBridgeWomens" onMouseEnter={this.enterMenu}></div></li>
 
 
-                  <li onMouseEnter={ this.enterMenu } onMouseLeave={ this.leaveMenu } onClick={this.toggleMenu}><Link to="/Backpacks">BACKPACKS</Link><div className="hoverBridgeBackpacks" onMouseEnter={this.enterMenu}></div></li>
+                  <li onClick={this.toggleMenu} onMouseEnter={this.enterMenu}
+                  onMouseLeave={this.leaveMenu}><Link to="/Backpacks">BACKPACKS</Link><div className="hoverBridgeBackpacks" onMouseEnter={this.enterMenu}></div></li>
 
 
                   <li><Link to="/explore">EXPLORE</Link></li>
               </ul>
 
           </div>
-          <div>
+
+          <div className="desktopDropdownInstanceContainer">
             <DesktopDropdownMenu dropdownActive={ this.state.dropdownActive } onMouseEnter={ this.enterMenu } onMouseLeave={ this.leaveMenu } toggleMenu={this.toggleMenu}/>
           </div>
 

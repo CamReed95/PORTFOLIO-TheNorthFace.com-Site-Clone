@@ -15,7 +15,7 @@ export default function Homepage (props) {
               <h1>BUILT TO LAST</h1>
               <h2>Backed by a Lifetime Warranty.</h2>
               <div className="button">
-                <Link to='/shop/backpacks'>
+                <Link to='/backpacks'>
                   <h3>FIND THE PERFECT PACK</h3>
                 </Link>
               </div>
@@ -45,7 +45,7 @@ export default function Homepage (props) {
           <h1>{"SHOW THEM WHO'S BOSS"}</h1>
           <p>Get your hands on the best form-fitting gear for fall.</p>
           <div className="button featureButton">
-            <Link to="/womens">
+            <Link to="/shop/womens">
               <h3>{"SHOP WOMEN'S"}</h3>
             </Link>
           </div>
@@ -57,7 +57,7 @@ export default function Homepage (props) {
           <h1>PREPARE FOR ADVENTURE</h1>
           <p>Look good when you get there.</p>
           <div className="button featureButton">
-            <Link to="/mens">
+            <Link to="/shop/mens">
               <h3>{"SHOP MEN'S"}</h3>
             </Link>
           </div>

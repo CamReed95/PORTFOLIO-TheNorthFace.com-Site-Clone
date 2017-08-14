@@ -6,7 +6,7 @@
     width: 100vw;
     height: 250px;
     margin: 0 auto;
-    background-color: lime;
+    background-color: white;
     top: 100%;
     left: -51.5%;
   }
@@ -15,9 +15,9 @@
     width: 60%;
     height: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1em 6em;
-    background-color: salmon;
+    /*background-color: salmon;*/
   }
 
   .categoryLinks h2 {
@@ -27,19 +27,21 @@
   }
 
   .categoryLinks p {
-    color: #E3E3E3;
+    color: black;
     margin-bottom: 0.75em;
+    letter-spacing: 0.07em;
+
+}
+
+  .categoryLinks a {
+    text-decoration-line: none;
   }
 
-  .onHoverDivDesktopNav {
-    position: absolute;
-    height: 15vh;
-    width: 54%;
-    top: 5vh;
-    margin-left: -1em;
-    z-index: 99;
+  .categoryLinks h2 a {
+    color: black;
+  }
 
-    border: 2px solid red;
-    background-color: transparent;
-    /*delete this if onHover works in dropdownmenu component*/
+  .categoryLinks p a {
+    color: #a9a9a9;
+
   }

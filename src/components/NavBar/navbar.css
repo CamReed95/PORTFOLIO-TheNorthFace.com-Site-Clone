@@ -98,7 +98,7 @@
 
   .hoverBridge {
     position: absolute;
-    height: 15vh;
+    height: 3vh;
     min-width: 8.75vh;
     left: -.5vh;
     top: 8vh;
@@ -110,7 +110,7 @@
 
   .hoverBridgeWomens {
     position: absolute;
-    height: 15vh;
+    height: 3vh;
     min-width: 10.5vh;
     left: 8.75vh;
     top: 8vh;
@@ -121,7 +121,7 @@
 
   .hoverBridgeBackpacks {
     position: absolute;
-    height: 15vh;
+    height: 3vh;
     min-width: 14vh;
     left: 20vh;
     top: 8vh;

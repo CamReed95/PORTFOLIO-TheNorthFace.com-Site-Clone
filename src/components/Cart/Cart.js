@@ -21,6 +21,11 @@ class Cart extends Component {
     return (
       <div className="cartComponentContainer">
         <div className="cartContentsContainer">
+          <div className="cartCountMessage">
+          {!this.props.cart.length ? <p>THERE ARE NO ITEMS IN YOUR CART</p> : this.props.cart.length === 1 ? <p>1 ITEM IN YOUR CART</p> : <p>{this.props.cart.length} ITEMS IN YOUR CART</p>}
+
+
+          </div>
           {cartItems}
         </div>
       </div>

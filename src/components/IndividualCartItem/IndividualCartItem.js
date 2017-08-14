@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './individualCartItem.css';
 import { removeFromCart } from './../../ducks/reducer';
+import { Dropdown } from 'semantic-ui-react'
 import { connect } from 'react-redux';
 
 class IndividualCartItem extends Component{
@@ -15,17 +16,20 @@ class IndividualCartItem extends Component{
           </section>
 
           <section className="cartItemRight">
-            <h1>{this.props.item.product.name}</h1>
-            <h2>{this.props.item.displayImgColor}</h2>
-            <p>AVAILABLE NOW TO SHIP</p>
-            <h2>SIZE - {this.props.item.selectedSize}</h2>
-            <h1>${this.props.item.product.price}.00</h1>
+            <p className="cartItemName">{this.props.item.product.name}</p>
+            <p className="cartItemColor">{this.props.item.displayImgColor}</p>
+            <p className="cartItemSize">Size - {this.props.item.selectedSize}</p>
+            <p className="availableNow">Available Now to Ship</p>
+            <div className="qtyPrice">
+              
+            <p className="cartItemPrice">${this.props.item.product.price}.00</p>
+            </div>
           </section>
+          <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index)}>
+            <h1 className="removeItemLink">REMOVE</h1>
+          </div>
+        </div>
 
-        </div>
-        <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index)}>
-          <h1 className="removeItemLink">REMOVE</h1>
-        </div>
       </div>
     )
   }

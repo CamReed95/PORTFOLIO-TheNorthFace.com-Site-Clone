@@ -8,10 +8,12 @@ class NavBar extends Component{
   constructor(props){
     super(props);
     this.state = {
-      dropdownActive: true
+      dropdownActive: true//Change to true after styling dropdown
     }
 
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.enterMenu = this.enterMenu.bind(this);
+    this.leaveMenu = this.leaveMenu.bind(this);
 
   }
 
@@ -27,7 +29,7 @@ class NavBar extends Component{
     })
   }
 
-  exitMenu() {
+  leaveMenu() {
     this.setState({
       dropdownActive: true
     })
@@ -45,16 +47,23 @@ class NavBar extends Component{
               <li>Sign In</li>
               <li className="cartButton">Cart ({this.props.cart.length})</li>
             </ul>
-            <ul className="navLinks">
-                <li onMouseEnter={ this.toggleMenu } onMouseLeave={ this.toggleMenu }>{"MEN'S"}</li>
-                <li><Link to="/womens">{"WOMEN'S"}</Link></li>
-                <li><Link to="/backpacks">BACKPACKS</Link></li>
-                <li><Link to="/explore">EXPLORE</Link></li>
-            </ul>
+
+
+              <ul className="navLinks">
+                  <li onMouseEnter={ this.enterMenu } onMouseLeave={ this.leaveMenu } onClick={this.toggleMenu}><Link to="/shop/mens">{"MEN'S"}</Link><div className="hoverBridge" onMouseEnter={this.enterMenu}></div></li>
+
+                  <li onMouseEnter={ this.enterMenu } onMouseLeave={ this.leaveMenu } onClick={this.toggleMenu}><Link to="/shop/womens">{"WOMEN'S"}</Link><div className="hoverBridgeWomens" onMouseEnter={this.enterMenu}></div></li>
+
+
+                  <li onMouseEnter={ this.enterMenu } onMouseLeave={ this.leaveMenu } onClick={this.toggleMenu}><Link to="/Backpacks">BACKPACKS</Link><div className="hoverBridgeBackpacks" onMouseEnter={this.enterMenu}></div></li>
+
+
+                  <li><Link to="/explore">EXPLORE</Link></li>
+              </ul>
 
           </div>
           <div>
-            <DesktopDropdownMenu dropdownActive={ this.state.dropdownActive } onMouseEnter={ this.enterMenu } onMouseLeave={ this.exitMenu }/>
+            <DesktopDropdownMenu dropdownActive={ this.state.dropdownActive } onMouseEnter={ this.enterMenu } onMouseLeave={ this.leaveMenu } toggleMenu={this.toggleMenu}/>
           </div>
 
         </div>

@@ -89,7 +89,45 @@
   .navBarDesktop {
     display: flex;
     width: 100%;
-    background-color: plum;
+    /*background-color: plum;*/
+  }
+
+  .topNav {
+    position: relative;
+  }
+
+  .hoverBridge {
+    position: absolute;
+    height: 15vh;
+    min-width: 8.75vh;
+    left: -.5vh;
+    top: 8vh;
+    z-index: 90;
+    /*border: 2px solid red;*/
+    background-color: transparent;
+
+  }
+
+  .hoverBridgeWomens {
+    position: absolute;
+    height: 15vh;
+    min-width: 10.5vh;
+    left: 8.75vh;
+    top: 8vh;
+    z-index: 90;
+    /*border: 2px solid lime;*/
+    background-color: transparent;
+  }
+
+  .hoverBridgeBackpacks {
+    position: absolute;
+    height: 15vh;
+    min-width: 14vh;
+    left: 20vh;
+    top: 8vh;
+    z-index: 90;
+    /*border: 2px solid orange;*/
+    background-color: transparent;
   }
 
   .userLinks {

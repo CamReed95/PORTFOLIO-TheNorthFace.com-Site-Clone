@@ -7,9 +7,6 @@ class Cart extends Component {
 
   render(){
 
-    console.log(this.props.cart)
-    console.log(this.props.cart[0]);
-
     const cartItems = this.props.cart.map( (item, index, arr)=> {
       return (
         <div key={index}>
@@ -32,7 +29,7 @@ class Cart extends Component {
               <p className="beforeTax">(Before Tax)</p>
             </div>
             <div className="numericalTotal">
-              <p>$ ** .00</p>
+              <p>$ {this.props.totalCartCost}.00</p>
             </div>
           </div>
         </div>
@@ -52,7 +49,8 @@ class Cart extends Component {
 
 function mapStateToProps(state){
   return {
-    cart: state.cart
+    cart: state.cart,
+    totalCartCost: state.totalCartCost
   }
 }
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './individualCartItem.css';
-import { removeFromCart } from './../../ducks/reducer';
+import { removeFromCart, updateTotalPrice } from './../../ducks/reducer';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import { connect } from 'react-redux';
@@ -10,19 +10,29 @@ class IndividualCartItem extends Component{
   constructor(props){
     super(props);
     this.state={
-      quantity: 1
+      quantity: 1,
+      itemPrice: this.props.item.product.price,
+      totalPrice: this.props.item.product.price
     }
 
     this.logQtyChange = this.logQtyChange.bind(this)
+    this.updateQtyCost = this.updateQtyCost.bind(this)
   }
 
 
 logQtyChange(event){
-  console.log(event)
   this.setState({
-    quantity: event.value
-  })
+    quantity: event === null ? 1 : event.value,
+    totalPrice: event === null ? this.state.itemPrice : this.state.itemPrice * event.value
+  });
+
 }
+
+updateQtyCost(){
+  {console.log("WORKING")}
+}
+
+
 
   render(){
 
@@ -48,12 +58,13 @@ logQtyChange(event){
               value={this.state.quantity}
               options={options}
               onChange={(e)=> this.logQtyChange(e)} />
-
-            <p className="cartItemPrice">${this.props.item.product.price}.00</p>
+              <p className="cartItemPrice">${this.props.item.product.price}.00</p>
             </div>
-
+            <div className="cartItemPriceTotal">
+              <p className="cartItemPriceTotal">${this.state.totalPrice}.00</p>
+            </div>
           </section>
-          <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index)}>
+          <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.props.item.product.price)}>
             <h1 className="removeItemLink">REMOVE</h1>
           </div>
         </div>
@@ -63,4 +74,4 @@ logQtyChange(event){
   }
 }
 
-export default connect(null, { removeFromCart })(IndividualCartItem);
+export default connect(null, { updateTotalPrice, removeFromCart })(IndividualCartItem);

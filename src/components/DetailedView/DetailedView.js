@@ -13,7 +13,8 @@ class DetailedView extends Component {
       displayImg: this.props.selectedImg,
       displayImgColor: this.props.selectedImgColor,
       sizesArr: [],
-      selectedSize: ''
+      selectedSize: '',
+      quantity: 1
     }
 
   }
@@ -138,7 +139,7 @@ componentWillReceiveProps(newProps) {
                 FREE 3-DAY SHIPPING
               </h3>
 
-              <div className="addToCartButton" onClick={()=> this.state.selectedSize ? this.props.addToCart(this.state, parseInt(this.state.product.price)) : alert("Please select size before adding item to cart.")}>
+              <div className="addToCartButton" onClick={()=> this.state.selectedSize ? this.props.addToCart(this.state) : alert("Please select size before adding item to cart.")}>
                 <h2>ADD TO CART</h2>
               </div>
 

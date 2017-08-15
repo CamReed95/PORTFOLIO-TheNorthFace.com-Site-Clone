@@ -7,7 +7,7 @@ class Cart extends Component {
 
   render(){
 
-    const cartItems = this.props.cart.map( (item, index, arr)=> {
+    let cartItems = this.props.cart.map( (item, index, arr)=> {
       return (
         <div key={index}>
           <IndividualCartItem item={item} index={index} />
@@ -29,7 +29,7 @@ class Cart extends Component {
               <p className="beforeTax">(Before Tax)</p>
             </div>
             <div className="numericalTotal">
-              <p>$ {this.props.totalCartCost}.00</p>
+                <p>${this.props.totalCartCost ? this.props.totalCartCost : 0 }.00</p>
             </div>
           </div>
         </div>

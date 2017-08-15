@@ -10,29 +10,18 @@ class IndividualCartItem extends Component{
   constructor(props){
     super(props);
     this.state={
-      quantity: 1,
-      itemPrice: this.props.item.product.price,
-      totalPrice: this.props.item.product.price
+
     }
 
-    this.logQtyChange = this.logQtyChange.bind(this)
-    this.updateQtyCost = this.updateQtyCost.bind(this)
+    this.logQtyChange = this.logQtyChange.bind(this);
   }
 
 
 logQtyChange(event){
   this.setState({
-    quantity: event === null ? 1 : event.value,
-    totalPrice: event === null ? this.state.itemPrice : this.state.itemPrice * event.value
   });
-
+  this.props.updateTotalPrice({newQty: event.value, id: this.props.item.product_id, size: this.props.item.productSize, color: this.props.item.displayImgColor})
 }
-
-updateQtyCost(){
-  {console.log("WORKING")}
-}
-
-
 
   render(){
 
@@ -47,24 +36,27 @@ updateQtyCost(){
           </section>
 
           <section className="cartItemRight">
-            <p className="cartItemName">{this.props.item.product.name}</p>
+            <p className="cartItemName">{this.props.item.name}</p>
             <p className="cartItemColor">{this.props.item.displayImgColor}</p>
-            <p className="cartItemSize">Size - {this.props.item.selectedSize}</p>
+            <p className="cartItemSize">Size - {this.props.item.productSize}</p>
             <p className="availableNow">Available Now to Ship</p>
 
             <div className="qtyPrice">
               <Select
               className="qtySelector"
-              value={this.state.quantity}
+              value={this.props.item.quantity}
               options={options}
-              onChange={(e)=> this.logQtyChange(e)} />
-              <p className="cartItemPrice">${this.props.item.product.price}.00</p>
+              onChange={(e)=> {
+                this.logQtyChange(e)
+              }
+              } />
+              <p className="cartItemPrice">${this.props.item.price}.00</p>
             </div>
             <div className="cartItemPriceTotal">
-              <p className="cartItemPriceTotal">${this.state.totalPrice}.00</p>
+              <p className="cartItemPriceTotal">${this.props.item.totalPriceByQty}.00</p>
             </div>
           </section>
-          <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.props.item.product.price)}>
+          <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.state.totalQtyPrice)}>
             <h1 className="removeItemLink">REMOVE</h1>
           </div>
         </div>
@@ -74,4 +66,5 @@ updateQtyCost(){
   }
 }
 
-export default connect(null, { updateTotalPrice, removeFromCart })(IndividualCartItem);
+
+export default connect( null, { updateTotalPrice, removeFromCart })(IndividualCartItem);

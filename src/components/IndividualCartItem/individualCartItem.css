@@ -34,11 +34,23 @@
   padding-left: 1em;
 }
 
+.qtyPrice {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qtySelector {
+  width: 55%;
+}
+
 .cartItemName, .cartItemPrice {
   font-size: 1.15em;
   font-weight: 700;
   margin-bottom: .75em;
 }
+
 
 .cartItemColor, .cartItemSize {
   font-size: 1em;
@@ -54,7 +66,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: .5em 0;
+  margin: .75em 0 1em 0;
 }
 .removeItemLink {
   color: red;

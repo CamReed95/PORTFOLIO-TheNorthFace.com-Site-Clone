@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './cart.css';
 import IndividualCartItem from './../IndividualCartItem/IndividualCartItem';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class Cart extends Component {
@@ -47,8 +48,11 @@ class Cart extends Component {
                   <p>${this.props.totalCartCost ? this.props.totalCartCost : 0 }.00</p>
               </div>
             </div>
-            <div className="checkoutButton">
+            <div className="checkoutButtonMain">
               <h1>SECURE CHECKOUT</h1>
+            </div>
+            <div className="continueShoppingiPhone">
+            <Link to="/"><p>CONTINUE SHOPPING</p></Link>
             </div>
 
           </div>
@@ -63,7 +67,7 @@ class Cart extends Component {
             {cartItems}
           </div>
 
-          <div className="checkoutContaineriPadDesktop">
+          <div className="checkoutContainerMain">
             <div className="checkoutDetailsContainer">
 
               <div className="checkout checkoutTop">
@@ -76,7 +80,7 @@ class Cart extends Component {
                       <p>${this.props.totalCartCost ? this.props.totalCartCost : 0 }.00</p>
                   </div>
                 </div>
-                <div className="checkoutButton">
+                <div className="checkoutButtonMain">
                   <h1>SECURE CHECKOUT</h1>
                 </div>
               </div>
@@ -107,8 +111,12 @@ class Cart extends Component {
                 </div>
 
               </div>
-
             </div>
+
+              <div className="checkoutButtonMain checkoutButtonBottom">
+                <h1>SECURE CHECKOUT</h1>
+              </div>
+              <Link to="/"><p className="continueShopping">CONTINUE SHOPPING</p></Link>
           </div>
 
           <div className="cartContentsContaineriPadDesktop">

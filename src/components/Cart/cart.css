@@ -28,6 +28,17 @@
   letter-spacing: 0.075em;
 }
 
+.checkoutContainerMain {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em 0;
+  background-color: #E3E3E3;
+}
+
 .checkoutContaineriPhone {
   height: 29.5vh;
   width: 100%;
@@ -39,13 +50,28 @@
 
 .checkoutDetailsContainer {
   width: 90%;
-  height: 80%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25em 1.25em;
+  padding: 1.25em 1.75em;
   background-color: white;
+}
+
+.checkoutTop {
+  width: 100%;
+  padding-bottom: 1.5em;
+}
+
+.orderInfo {
+  margin-bottom: 1.5em;
+}
+
+.checkoutMiddle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .orderInfo {
@@ -53,6 +79,48 @@
   display: flex;
   justify-content: space-between;
 }
+
+.orderSummary {
+  font-size: 1.75em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: 1em 0;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+
+.itemSubtotalInfo, .estTax, .checkoutGrandTotal {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: .87em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-align: left;
+  padding: 1.15em 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.itemSubtotalQtyPrice, .estShipping, .estTax, .checkoutGrandTotal {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.estShipping {
+  margin-top: 3em;
+}
+
+.estTax, .checkoutGrandTotal {
+  min-height: 7vh;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
 
 .checkoutDetailsContainer p {
   font-size: 1.15em;
@@ -66,21 +134,40 @@
   font-weight: 700;
 }
 
-
-.checkoutButton {
+.checkoutButtonMain {
   width: 100%;
   height: 7.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: red;
+  margin-bottom: 0.5em;
 }
 
-.checkoutButton h1 {
+.checkoutButtonBottom {
+  margin: 1.75em 0 1em 0;
+  width: 90%;
+}
+
+.checkoutButtonMain h1 {
   color: white;
   font-size: 1.15em;
   font-weight: 700;
   letter-spacing: .02em
+}
+
+.continueShoppingiPhone p {
+  color: red;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 0.037em;
+}
+
+.continueShopping {
+  color: red;
+  font-size: 0.85em;
+  font-weight: 700;
+  letter-spacing: 0.037em;
 }
 
 .cartContentsContaineriPhone {
@@ -160,21 +247,16 @@
     justify-content: flex-start;
   }
 
-  .checkoutContaineriPadDesktop {
-    height: auto;
+  .checkoutContainerMain {
     width: 37%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #E3E3E3;
   }
 
-  .checkoutButton {
+  .checkoutButtonMain {
     width: 100%;
     height: 5.5vh;
     margin: 1.5em 0;
   }
-
 
   .checkout {
     width: 100%;
@@ -182,26 +264,23 @@
     border-bottom: 1px solid #e3e3e3;
   }
 
+  .checkoutTop {
+    padding-bottom: 0;
+
+  }
+
+  .checkoutMiddle {
+    border-bottom: none;
+  }
+
   .orderSummary {
-    font-size: 1.6em;
-    font-weight: 900;
-    letter-spacing: 0.05em;
-    text-align: center;
+    font-size: 1.5em;
     padding: 1.15em 0;
-    border-bottom: 1px solid #e3e3e3;
+    border-top: none;
   }
 
   .itemSubtotalInfo, .estTax, .checkoutGrandTotal {
-    min-height: 10vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     font-size: .87em;
-    font-weight: 900;
-    letter-spacing: 0.05em;
-    text-align: left;
-    padding: 1.15em 0;
-    border-bottom: 1px solid #e3e3e3;
   }
 
   .itemSubtotalQtyPrice, .estShipping, .estTax, .checkoutGrandTotal {
@@ -211,20 +290,21 @@
     align-items: space-between;
   }
 
-  .estShipping, .estTax {
-    display: flex;
-    align-items: center;
+  .estShipping {
+    margin-top: 0;
   }
 
-  .estShipping p:nth-child(2) {
-    font-size: 1.5em;
-    font-weight: 400;
+  .checkoutButtonBottom {
+    width: 90%;
+    margin: 1.75em 0 1em 0;
+
   }
 
-  .estTax, .checkoutGrandTotal {
-    min-height: 7vh;
-    flex-direction: row;
-    align-items: flex-end;
+  .continueShopping {
+    color: red;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 0.037em;
   }
 
 

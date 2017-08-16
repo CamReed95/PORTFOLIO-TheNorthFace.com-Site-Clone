@@ -24,12 +24,17 @@ class Cart extends Component {
 
         <div className="checkoutContainer">
           <div className="totalContainer">
-            <div className="orderTotal">
-              <p>ORDER TOTAL</p>
-              <p className="beforeTax">(Before Tax)</p>
+            <div className="orderInfo">
+              <div className="orderTotal">
+                <p>ORDER TOTAL</p>
+                <p className="beforeTax">(Before Tax)</p>
+              </div>
+              <div className="numericalTotal">
+                  <p>${this.props.totalCartCost ? this.props.totalCartCost : 0 }.00</p>
+              </div>
             </div>
-            <div className="numericalTotal">
-                <p>${this.props.totalCartCost ? this.props.totalCartCost : 0 }.00</p>
+            <div className="checkoutButton">
+              <h1>SECURE CHECKOUT</h1>
             </div>
           </div>
         </div>

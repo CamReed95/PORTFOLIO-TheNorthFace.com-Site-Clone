@@ -1,4 +1,8 @@
-.cartItemContaineriPadDesktop{
+.cartItemContaineriPad{
+  display: none;
+}
+
+.cartItemContainerDesktop {
   display: none;
 }
 
@@ -91,6 +95,11 @@
   .cartItemContaineriPhone {
     display: none;
   }
+
+  .cartItemContainerDesktop {
+    display: none;
+  }
+
   .cartItemContaineriPad{
     width: 100%;
     min-height: 20vh;
@@ -147,5 +156,135 @@
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+@media(min-width: 1400px) {
+
+
+  .cartItemContaineriPad {
+    display: none;
+  }
+
+  .cartItemContainerDesktop{
+    width: 40vw;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    margin: 1em 0;
+    /*background-color: lime;*/
+  }
+
+  .cartItemSections {
+    width: 100%;
+    min-height: 25vh;
+    display: flex;
+    margin-top: 1em;
+    border-bottom: 1px solid #E3E3E3;
+    padding-bottom: 1.5em;
+    /*background-color: pink;*/
+  }
+
+  .cartItemLeft {
+    height: 20vh;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /*background-color: plum;*/
+  }
+
+  .cartItemImg {
+    height: 100%;
+    margin-right: 1.5em;
+  }
+
+  .nameColorSize {
+    width: 65%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*background-color: red;*/
+  }
+
+  .cartItemName {
+    font-size: 1.5em;
+    width: 85%;
+  }
+
+
+  .cartItemColor, .cartItemSize {
+    font-size: 1.2em;
+    margin-bottom: .5em;
+    width: 85%;
+    line-height: 1.2em;
+  }
+
+  .availableNow {
+    color: green;
+    font-size: 1.2em;
+    margin-top: .5em;
+  }
+
+  .cartItemRight {
+    min-height: 40%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    /*background-color: black;*/
+  }
+
+  .qtyAndRemove {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .qtyPrice {
+    width: 100%;
+    flex-direction: column;
+
+  }
+  .qtySelector {
+    width: 65%;
+    margin-top: .15em;
+  }
+
+  .removeButton {
+    width: 100%;
+    font-size: .8em;
+    justify-content: flex-start;
+  }
+
+  .itemAndQtyPrices {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: .25em;
+    /*background-color: yellow;*/
+  }
+
+  .pricesContainer {
+    width: 95%;
+    height: auto;
+    align-items: space-between;
+    /*background-color: plum;*/
+  }
+
+  .cartItemPrice {
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-right: auto;
+  }
+
+  .cartItemPriceTotal {
+    width: auto;
+    margin-left: auto;
+  }
+
 
 }

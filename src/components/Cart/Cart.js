@@ -54,7 +54,6 @@ class Cart extends Component {
             <div className="continueShoppingiPhone">
             <Link to="/"><p>CONTINUE SHOPPING</p></Link>
             </div>
-
           </div>
         </div>
 
@@ -122,11 +121,15 @@ class Cart extends Component {
           <div className="cartContentsContaineriPad">
             {cartItems}
           </div>
+
+          <div className="cartContentsContainerDesktop">
+            {cartItems}
+          </div>
         </div>
 
 
 
-      
+
 
 
       </div>

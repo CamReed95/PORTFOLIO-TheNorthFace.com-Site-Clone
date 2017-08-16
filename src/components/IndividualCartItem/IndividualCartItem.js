@@ -28,36 +28,78 @@ logQtyChange(event){
     const options = [ {value: 1, label: 1}, {value: 2, label: 2}, {value: 3, label: 3}, {value: 4, label: 4}, {value: 5, label: 5}, {value: 6, label: 6}, {value: 7, label: 7}, {value: 8, label: 8}, {value: 9, label: 9} ];
 
     return(
-      <div className="cartItemContainer">
-        <div className="cartItemSections">
+      <div className="componentContainer">
 
-          <section className="cartItemLeft">
-          <img className="cartItemImg" src={this.props.item.displayImg} alt="product in cart"/>
-          </section>
+        <div className="cartItemContaineriPhone">
+          <div className="cartItemSections">
 
-          <section className="cartItemRight">
-            <p className="cartItemName">{this.props.item.name}</p>
-            <p className="cartItemColor">{this.props.item.displayImgColor}</p>
-            <p className="cartItemSize">Size - {this.props.item.productSize}</p>
-            <p className="availableNow">Available Now to Ship</p>
+            <section className="cartItemLeft">
+            <img className="cartItemImg" src={this.props.item.displayImg} alt="product in cart"/>
+            </section>
 
-            <div className="qtyPrice">
-              <Select
-              className="qtySelector"
-              value={this.props.item.quantity}
-              options={options}
-              onChange={(e)=> {
-                this.logQtyChange(e)
-              }
-              } />
-              <p className="cartItemPrice">${this.props.item.price}.00</p>
+            <section className="cartItemRight">
+              <p className="cartItemName">{this.props.item.name}</p>
+              <p className="cartItemColor">{this.props.item.displayImgColor}</p>
+              <p className="cartItemSize">Size - {this.props.item.productSize}</p>
+              <p className="availableNow">Available Now to Ship</p>
+
+              <div className="qtyPrice">
+                <Select
+                className="qtySelector"
+                value={this.props.item.quantity}
+                options={options}
+                onChange={(e)=> {
+                  this.logQtyChange(e)
+                }
+                } />
+                <p className="cartItemPrice">${this.props.item.price}.00</p>
+              </div>
+              <div className="cartItemPriceTotal">
+                <p className="cartItemPriceTotal">${this.props.item.totalPriceByQty}.00</p>
+              </div>
+            </section>
+            <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.state.totalQtyPrice)}>
+              <h1 className="removeItemLink">REMOVE</h1>
             </div>
-            <div className="cartItemPriceTotal">
-              <p className="cartItemPriceTotal">${this.props.item.totalPriceByQty}.00</p>
-            </div>
-          </section>
-          <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.state.totalQtyPrice)}>
-            <h1 className="removeItemLink">REMOVE</h1>
+          </div>
+        </div>
+
+        
+
+        <div className="cartItemContaineriPadDesktop">
+          <div className="cartItemSections">
+
+            <section className="cartItemLeft">
+            <img className="cartItemImg" src={this.props.item.displayImg} alt="product in cart"/>
+            </section>
+
+            <section className="cartItemRight">
+              <p className="cartItemName">{this.props.item.name}</p>
+              <p className="cartItemColor">{this.props.item.displayImgColor}</p>
+              <p className="cartItemSize">Size - {this.props.item.productSize}</p>
+              <p className="availableNow">Available Now to Ship</p>
+
+              <div className="qtyPrice">
+                <Select
+                className="qtySelector"
+                value={this.props.item.quantity}
+                options={options}
+                onChange={(e)=> {
+                  this.logQtyChange(e)
+                }
+                } />
+                <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.state.totalQtyPrice)}>
+                  <h1 className="removeItemLink">REMOVE</h1>
+                </div>
+                <div className="pricesContainer">
+                  <p className="cartItemPrice">${this.props.item.price}.00</p>
+                  <p className="cartItemPriceTotal">TOTAL ${this.props.item.totalPriceByQty}.00</p>
+
+                </div>
+              </div>
+
+            </section>
+
           </div>
         </div>
 

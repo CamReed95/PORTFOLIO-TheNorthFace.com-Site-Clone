@@ -54,7 +54,7 @@ class IndividualProduct extends Component {
 
         <div className="detailedViewButton" onClick={this.saveSelectedImg}>
           <Link to={'/product/' + this.props.product.product_id}>
-            <h2>DETAILED VIEW</h2>
+            <h2>QUICK VIEW</h2>
           </Link>
         </div>
 

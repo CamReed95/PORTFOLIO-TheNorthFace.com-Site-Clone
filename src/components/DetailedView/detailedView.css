@@ -69,8 +69,9 @@
 
 .sizesDisplay {
   width: 95%;
-  height: 115px;
+  min-height: 145px;
   margin-bottom: 2em;
+  padding-bottom: 1em;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -103,7 +104,7 @@
   height: 45px;
   width: 45px;
   padding: 0 8px;
-  margin: 0 8px;
+  margin: 0 8px 8px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -300,6 +301,7 @@
 
   .sizesDisplay {
     height: auto;
+    padding-top: 1em;
     margin-bottom: 2em;
     border-bottom: 1px solid #E3E3E3;
   }

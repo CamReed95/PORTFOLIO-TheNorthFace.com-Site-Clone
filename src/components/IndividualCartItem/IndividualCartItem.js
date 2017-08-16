@@ -131,9 +131,14 @@ logQtyChange(event){
                     this.logQtyChange(e)
                   }
                   } />
-                  <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.state.totalQtyPrice)}>
+                  <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.props.item.totalPriceByQty)}>
                     <h1 className="removeItemLink">REMOVE</h1>
                   </div>
+
+                  {console.log("Item price is", this.props.item.price)}
+
+                  {console.log("TotalQty Price is", this.props.item.totalPriceByQty)}
+
                 </div>
               </div>
 

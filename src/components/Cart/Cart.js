@@ -91,7 +91,7 @@ class Cart extends Component {
                 <div className="itemSubtotalInfo">
                   <div className="itemSubtotalQtyPrice">
                     <p>ITEM SUBTOTAL ({itemsQty})</p>
-                    <p>${this.props.totalCartCost}.00</p>
+                    <p>${this.props.totalCartCost ? this.props.totalCartCost : 0 }.00</p>
                   </div>
                   <div className="estShipping">
                     <p>ESTIMATED SHIPPING</p>

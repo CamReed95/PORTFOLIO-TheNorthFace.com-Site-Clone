@@ -64,9 +64,9 @@ logQtyChange(event){
           </div>
         </div>
 
-        
 
-        <div className="cartItemContaineriPadDesktop">
+
+        <div className="cartItemContaineriPad">
           <div className="cartItemSections">
 
             <section className="cartItemLeft">

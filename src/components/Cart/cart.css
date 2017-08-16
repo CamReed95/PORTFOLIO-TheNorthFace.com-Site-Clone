@@ -175,7 +175,7 @@
   height: 100%;
 }
 
-.cartContentsContaineriPadDesktop {
+.cartContentsContaineriPad {
   display: none;
 }
 
@@ -195,7 +195,7 @@
 @media(min-width: 700px) {
 
   .cartCountHeader {
-    width: 90%;
+    width: 95%;
     height: 15vh;
     border-bottom: 1px solid #E3E3E3;
   }
@@ -224,17 +224,22 @@
   }
 
   .cartItemsCartCheckout {
-    width: 100%;
+    width: 92.5%;
     height: auto;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 2.5em 0;
   }
 
-  .cartContentsContaineriPadDesktop {
+  .cartContentsContaineriPad {
     display: flex;
     flex-direction: column;
-    width: 63%;
+    align-items: center;
+    width: 53%;
     height: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .checkoutContaineriPhone{
@@ -248,14 +253,16 @@
   }
 
   .checkoutContainerMain {
-    width: 37%;
+    width: 42%;
     display: flex;
+
   }
 
   .checkoutButtonMain {
     width: 100%;
     height: 5.5vh;
     margin: 1.5em 0;
+    text-align: center;
   }
 
   .checkout {
@@ -280,14 +287,7 @@
   }
 
   .itemSubtotalInfo, .estTax, .checkoutGrandTotal {
-    font-size: .87em;
-  }
-
-  .itemSubtotalQtyPrice, .estShipping, .estTax, .checkoutGrandTotal {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: space-between;
+    font-size: .81em;
   }
 
   .estShipping {
@@ -305,6 +305,28 @@
     font-size: 1em;
     font-weight: 700;
     letter-spacing: 0.037em;
+  }
+}
+
+@media(min-width: 1000px) {
+  .cartComponentContainer {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3em;
+  }
+
+  .cartItemsCartCheckout {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 2.5em 0;
+    padding: 0 1em;
+  }
+
+  .itemSubtotalInfo, .estTax, .checkoutGrandTotal {
+    font-size: 1em;
   }
 
 

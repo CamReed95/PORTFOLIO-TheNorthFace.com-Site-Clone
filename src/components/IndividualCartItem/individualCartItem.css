@@ -202,13 +202,15 @@
   .nameColorSize {
     width: 65%;
     min-height: 100%;
+    font-size: 0.85em;
     display: flex;
     flex-direction: column;
     /*background-color: red;*/
   }
 
   .cartItemName {
-    font-size: 1.5em;
+    font-size: 1.25em;
+    line-height: 1.3;
     width: 85%;
   }
 
@@ -271,6 +273,7 @@
   .pricesContainer {
     width: 95%;
     height: auto;
+    font-size: 0.85em;
     align-items: space-between;
     /*background-color: plum;*/
   }

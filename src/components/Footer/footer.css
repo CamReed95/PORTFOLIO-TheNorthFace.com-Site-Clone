@@ -35,8 +35,34 @@
   margin-right: 1em;
 }
 
+.footerDropdown {
+  width: 100%;
+  min-height: 10vh;
+  padding-top: 1em;
+  background: white;
+}
+
+.footerDropdownLinks {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+  padding-bottom: 1em;
+
+}
+
+.footerDropdownLinks p {
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: .5em;
+}
+
+
 .footerLinks {
   display: none;
+}
+
+.appStoreFooter {
+  width: 25%;
 }
 
 .appStore {

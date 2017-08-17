@@ -24,15 +24,12 @@ class IndividualProduct extends Component {
   render() {
     return (
       <div key={this.props.id} className={this.props.containerStyle}>
-        <img src={this.state.displayImg} className="productImg" alt="Product"/>
+        <Link to={'/product/' + this.props.product.product_id} onClick={this.saveSelectedImg}><img src={this.state.displayImg} className="productImg" alt="Product"/> </Link>
 
         <div className="thumbnails">
-
-
           {this.props.product.img1 ? <img src={this.props.product.img1} alt="product thumbnail" onClick={ ()=> {
             this.setState({ displayImg: this.props.product.img1, displayImgName: this.props.product.color1 })
           }}/> :''}
-
 
           {this.props.product.img2 ? <img src={this.props.product.img2} alt="product thumbnail" onClick={ ()=> {
             this.setState({ displayImg: this.props.product.img2, displayImgName: this.props.product.color2 })

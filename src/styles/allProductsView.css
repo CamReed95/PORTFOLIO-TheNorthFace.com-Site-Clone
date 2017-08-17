@@ -80,7 +80,7 @@
   font-size: 1.1em;
   font-weight: 900;
   line-height: 1.4em;
-  height: 80px;
+  height: 11vh;
 }
 
 .productsContainer p {
@@ -137,7 +137,7 @@
   .productName {
     font-size: 1.4em;
     line-height: 1.4em;
-    height: 100px;
+    height: 12vh;
   }
 
   .productsContainer p {
@@ -195,9 +195,10 @@
   }
 
   .productName {
-    font-size: 1.15em;
-    line-height: 1.15em;
-    height: 3em;
+    font-size: 1.1em;
+    line-height: 1.2em;
+    height: 4.5em;
+    width: 90%;
   }
 
   .productsContainer p {

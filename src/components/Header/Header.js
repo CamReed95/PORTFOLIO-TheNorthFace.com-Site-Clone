@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './header.css';
 import NavBarDesktop from './../NavBar/NavBarDesktop';
 import NavBariPad from './../NavBar/NavBariPad';
-
 import DropdownMenu from './../DropdownMenu/DropdownMenu';
 import { connect } from 'react-redux';
 
@@ -13,13 +12,9 @@ class Header extends Component {
     super(props);
     this.state = {
       menuActive: true,
-      display: {display: 'none'},
-      displayNull: null,
-      displayToggle: false
     }
 
     this.toggleMenu = this.toggleMenu.bind(this);
-    this.closeDisplay = this.closeDisplay.bind(this);
 
   }
 
@@ -30,39 +25,16 @@ toggleMenu() {
   })
 }
 
-closeDisplay(){
-  if(this.state.displayToggle) {
-    this.setState({
-      displayNull: {display: 'none'},
-      displayToggle: !this.state.displayToggle
-    })
-  } else {
-    this.setState({
-      displayNull: null
-    })
-  }
-
-}
-
-
   render() {
 
-    let qtyIncrement = 0;
 
     let itemAddedStyle = this.state.display;
 
     let qtyCount = 0;
 
     this.props.cart.forEach(  product => {
-      qtyIncrement += parseInt(product.quantity, 10)
+      qtyCount += parseInt(product.quantity, 10)
     })
-
-    if(qtyCount !== qtyIncrement){
-      itemAddedStyle =
-      this.state.displayToggle ? this.state.displayNull : this.state.display;
-      qtyCount == qtyIncrement;
-    }
-
 
 
     let cartCountStyle = {backgroundColor: 'red'}
@@ -86,9 +58,9 @@ closeDisplay(){
 
           <Link to="/cart">
             <div className="cartAndCount">
-              <div className="cartItemsCount" style={ qtyIncrement ? cartCountStyle : null }>
+              <div className="cartItemsCount" style={ qtyCount ? cartCountStyle : null }>
                 <p className="cartCount">
-                {qtyIncrement}</p>
+                {qtyCount}</p>
               </div>
               <img className="cartIcon"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png" alt="Cart icon" />
             </div>
@@ -114,8 +86,7 @@ closeDisplay(){
 
 function mapStateToProps(state) {
   return {
-    cart: state.cart,
-    itemAdded: state.itemAdded
+    cart: state.cart
   }
 }
 

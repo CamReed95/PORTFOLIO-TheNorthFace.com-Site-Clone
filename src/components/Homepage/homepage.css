@@ -55,6 +55,7 @@
   text-align: center;
 }
 
+
 .button {
   display: flex;
   justify-content: center;
@@ -64,11 +65,14 @@
   border: 1px solid black;
 }
 
+
+
 .button h3 {
   font-size: 1em;
   letter-spacing: 0.12em;
   font-weight: 900;
   text-align: center;
+  color: black;
 }
 
 .button a, .button a:visited {

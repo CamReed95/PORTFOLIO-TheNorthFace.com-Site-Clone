@@ -52,7 +52,7 @@ class NavBariPad extends Component{
                 <li onClick={this.toggleMenu}>{"MEN'S"}</li>
                 <li onClick={this.toggleMenu}>{"WOMEN'S"}</li>
                 <li onClick={this.toggleMenu}>BACKPACKS</li>
-                <li><Link to="/explore">EXPLORE</Link></li>
+                <li>EXPLORE</li>
             </ul>
           </div>
 

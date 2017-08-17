@@ -12,10 +12,14 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuActive: true
+      menuActive: true,
+      display: {display: 'none'},
+      displayNull: null,
+      displayToggle: false
     }
 
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.closeDisplay = this.closeDisplay.bind(this);
 
   }
 
@@ -26,16 +30,42 @@ toggleMenu() {
   })
 }
 
+closeDisplay(){
+  if(this.state.displayToggle) {
+    this.setState({
+      displayNull: {display: 'none'},
+      displayToggle: !this.state.displayToggle
+    })
+  } else {
+    this.setState({
+      displayNull: null
+    })
+  }
+
+}
+
 
   render() {
 
-    let itemAddedStyle = {display: 'none'};
+    let qtyIncrement = 0;
+
+    let itemAddedStyle = this.state.display;
 
     let qtyCount = 0;
 
     this.props.cart.forEach(  product => {
-      qtyCount += parseInt(product.quantity, 10)
+      qtyIncrement += parseInt(product.quantity, 10)
     })
+
+    if(qtyCount !== qtyIncrement){
+      itemAddedStyle =
+      this.state.displayToggle ? this.state.displayNull : this.state.display;
+      qtyCount == qtyIncrement;
+    }
+
+
+
+    let cartCountStyle = {backgroundColor: 'red'}
 
     return (
 
@@ -56,9 +86,9 @@ toggleMenu() {
 
           <Link to="/cart">
             <div className="cartAndCount">
-              <div className="cartItemsCount">
+              <div className="cartItemsCount" style={ qtyIncrement ? cartCountStyle : null }>
                 <p className="cartCount">
-                {qtyCount}</p>
+                {qtyIncrement}</p>
               </div>
               <img className="cartIcon"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Shopping_cart_font_awesome.svg/2000px-Shopping_cart_font_awesome.svg.png" alt="Cart icon" />
             </div>
@@ -73,14 +103,6 @@ toggleMenu() {
           <div className="linksContainer">
           <NavBarDesktop />
           <NavBariPad />
-          </div>
-        </div>
-        <div className="itemAddedMsgiPhone" style={ this.state.itemAdded ? itemAddedStyle : null }>
-          <div className="msgContainer">
-            <p>YOU HAVE SUCCESSFULLY ADDED "PRODUCT NAME" TO YOUR SHOPPING CART.</p>
-            <div className="viewCartButton">
-              <p>VIEW CART</p>
-            </div>
           </div>
         </div>
 

@@ -28,8 +28,6 @@ class Cart extends Component {
 
     let checkoutGrandTotal = this.props.totalCartCost + estTax;
 
-    console.log(checkoutGrandTotal.toFixed(2))
-
     return (
       <div className="cartComponentContainer">
         <div className="cartCountHeader">
@@ -61,7 +59,7 @@ class Cart extends Component {
         <div className="cartItemsCartCheckout">
           <div className="cartContentsContaineriPhone">
             <div className="cartCountSubHeader">
-              {!this.props.cart.length ? <p>THERE ARE NO ITEMS IN YOUR CART</p> : this.props.cart.length === 1 ? <p>1 ITEM IN YOUR CART</p> : <p>{this.props.cart.length} ITEMS IN YOUR CART</p>}
+              {!itemsQty ? <p>THERE ARE NO ITEMS IN YOUR CART</p> : itemsQty === 1 ? <p>1 ITEM IN YOUR CART</p> : <p>{itemsQty} ITEMS IN YOUR CART</p>}
             </div>
             {cartItems}
           </div>

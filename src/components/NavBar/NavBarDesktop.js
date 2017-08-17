@@ -74,7 +74,7 @@ class NavBar extends Component{
                   onMouseLeave={this.leaveMenu}><Link to="/Backpacks">BACKPACKS</Link><div className="hoverBridgeBackpacks" onMouseEnter={this.enterMenu}></div></li>
 
 
-                  <li><Link to="/explore">EXPLORE</Link></li>
+                  <li><Link to="/#">EXPLORE</Link></li>
               </ul>
 
           </div>

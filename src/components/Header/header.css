@@ -104,6 +104,12 @@ body {
   background-color: #c1fcc1;
 }
 
+.close {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .msgContainer {
   width: 85%;
   height: 100%;

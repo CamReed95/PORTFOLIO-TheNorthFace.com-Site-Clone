@@ -31,18 +31,23 @@ class NavBariPad extends Component{
       qtyCount += parseInt(product.quantity, 10)
     })
 
+    let cartButtonStyle = { backgroundColor: 'red', color: 'white'}
 
     return (
       <div className="navBariPad">
         <div className="navBarContainer">
           <div className="topNav">
-            <ul className="userLinks">
-              <li>Find a Store</li>
-              <li>Sign In</li>
+            <div className="userLinks">
+              <p>Find a Store</p>
+              <p>Sign In</p>
 
-              <li className="cartButton"><Link to="/cart">Cart ({qtyCount})</Link></li>
+              <Link to="/cart">
+              <div className="cartButton" style={qtyCount ? cartButtonStyle : null}>
+              <p>Cart ({qtyCount})</p>
+              </div>
+              </Link>
 
-            </ul>
+            </div>
             <ul className="navLinks">
                 <li onClick={this.toggleMenu}>{"MEN'S"}</li>
                 <li onClick={this.toggleMenu}>{"WOMEN'S"}</li>

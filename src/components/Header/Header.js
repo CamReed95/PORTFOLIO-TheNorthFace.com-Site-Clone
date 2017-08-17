@@ -12,12 +12,10 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuActive: true,
-      itemAdded: this.props.itemAdded
+      menuActive: true
     }
 
     this.toggleMenu = this.toggleMenu.bind(this);
-    this.showItemAdded = this.showItemAdded.bind(this);
 
   }
 
@@ -28,15 +26,11 @@ toggleMenu() {
   })
 }
 
-showItemAdded(){
-  this.setState({
-    itemAdded: !this.props.itemAdded
-  })
-}
 
   render() {
 
     let itemAddedStyle = {display: 'none'};
+
     let qtyCount = 0;
 
     this.props.cart.forEach(  product => {
@@ -46,7 +40,6 @@ showItemAdded(){
     return (
 
       <div className="headerContainer">
-
         <div className="freeReturns">
         <p>FREE 3-DAY SHIPPING & FREE RETURNS</p>
         </div>
@@ -100,8 +93,7 @@ showItemAdded(){
 function mapStateToProps(state) {
   return {
     cart: state.cart,
-    itemAdded: state.itemAdded,
-    addToCartClicked: state.addToCartClicked
+    itemAdded: state.itemAdded
   }
 }
 

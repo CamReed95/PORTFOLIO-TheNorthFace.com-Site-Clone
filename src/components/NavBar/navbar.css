@@ -40,13 +40,21 @@
     padding-right: 2em;
     font-size: 0.8em;
     letter-spacing: 0.07em;
-    list-style: none;
   }
 
   .userLinks a {
     text-decoration-line: none;
     font-weight: 900;
     color: #2A2A2A;
+    height: 100%;
+  }
+
+  .cartButton {
+    height: 100%;
+    width: auto;
+    padding: 0 1.5em;
+    display: flex;
+    align-items: center;
   }
 
   .navLinks {

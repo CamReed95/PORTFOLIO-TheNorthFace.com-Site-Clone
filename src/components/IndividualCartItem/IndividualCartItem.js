@@ -58,7 +58,7 @@ logQtyChange(event){
                 <p className="cartItemPriceTotal">${this.props.item.totalPriceByQty}.00</p>
               </div>
             </section>
-            <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.state.totalQtyPrice)}>
+            <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.props.item.totalPriceByQty)}>
               <h1 className="removeItemLink">REMOVE</h1>
             </div>
           </div>
@@ -88,7 +88,7 @@ logQtyChange(event){
                   this.logQtyChange(e)
                 }
                 } />
-                <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.state.totalQtyPrice)}>
+                <div className="removeButton" onClick={()=> this.props.removeFromCart(this.props.index, this.props.item.totalPriceByQty)}>
                   <h1 className="removeItemLink">REMOVE</h1>
                 </div>
                 <div className="pricesContainer">

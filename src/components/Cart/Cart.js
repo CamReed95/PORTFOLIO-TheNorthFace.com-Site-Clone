@@ -101,12 +101,12 @@ class Cart extends Component {
 
                 <div className="estTax">
                   <p>ESTIMATED TAX</p>
-                  <p>${(this.props.totalCartCost * 0.0685).toFixed(2)}</p>
+                  <p>${this.props.totalCartCost ? estTax.toFixed(2) : "0.00"}</p>
                 </div>
 
                 <div className="checkoutGrandTotal">
                   <p>ORDER TOTAL</p>
-                  <p>${checkoutGrandTotal.toFixed(2)}</p>
+                  <p>${this.props.totalCartCost ? checkoutGrandTotal.toFixed(2) : "0.00"}</p>
                 </div>
 
               </div>
@@ -126,11 +126,6 @@ class Cart extends Component {
             {cartItems}
           </div>
         </div>
-
-
-
-
-
 
       </div>
 

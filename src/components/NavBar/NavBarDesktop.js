@@ -38,6 +38,13 @@ class NavBar extends Component{
 
 
   render() {
+
+    let qtyCount = 0;
+
+    this.props.cart.forEach(  product => {
+      qtyCount += parseInt(product.quantity, 10)
+    })
+
     return (
       <div className="navBarDesktop">
         <div className="navBarContainer">
@@ -45,7 +52,7 @@ class NavBar extends Component{
             <ul className="userLinks">
               <li>Find a Store</li>
               <li>Sign In</li>
-              <li className="cartButton"><Link to="/cart">Cart ({this.props.cart.length})</Link></li>
+              <li className="cartButton"><Link to="/cart">Cart ({qtyCount})</Link></li>
             </ul>
 
 

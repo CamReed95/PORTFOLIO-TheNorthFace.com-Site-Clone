@@ -14,10 +14,14 @@ class DetailedView extends Component {
       displayImgColor: this.props.selectedImgColor,
       sizesArr: [],
       selectedSize: '',
-      quantity: 1
+      quantity: 1,
+      addToCartClicked: this.props.addToCartClicked
     }
 
+    this.sendClick = this.sendClick.bind(this);
+
   }
+
 
 
 componentDidMount() {
@@ -32,6 +36,11 @@ componentWillReceiveProps(newProps) {
     });
 }
 
+sendClick(){
+  this.setState({
+    addToCartClicked: true
+  })
+}
 
   render() {
 
@@ -153,8 +162,9 @@ componentWillReceiveProps(newProps) {
 function mapStateToProps(state) {
   return {
     selectedImg: state.detailedViewImg,
-    selectedImgColor: state.detailViewImgName
+    selectedImgColor: state.detailViewImgName,
+    addToCartClicked: state.addToCartClicked
   }
 }
 
-export default connect(mapStateToProps, { addToCart })(DetailedView);
+export default connect(mapStateToProps, { addToCart})(DetailedView);

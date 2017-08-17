@@ -56,7 +56,6 @@
   margin-bottom: .5em;
 }
 
-
 .footerLinks {
   display: none;
 }
@@ -112,6 +111,11 @@
 
 /*IPAD VIEW*/
 @media(min-width: 700px) {
+
+  .footerDropdown {
+    display: none;
+  }
+
   .footerContainer {
     border-top: 1px #E3E3E3 solid;
     min-height: 30vh;

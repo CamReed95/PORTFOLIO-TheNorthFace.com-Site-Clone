@@ -134,19 +134,21 @@
   font-weight: 700;
 }
 
-.checkoutButtonMain {
+.stripeCheckoutiPhoneTop {
   width: 100%;
   height: 7.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
-  margin-bottom: 0.5em;
+  padding-bottom: 1.2em;
 }
 
-.checkoutButtonBottom {
-  margin: 1.75em 0 1em 0;
-  width: 90%;
+.stripeCheckout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2em 0 0 0;
+
 }
 
 .checkoutButtonMain h1 {
@@ -168,6 +170,7 @@
   font-size: 0.85em;
   font-weight: 700;
   letter-spacing: 0.037em;
+  padding-top: 1.75em;
 }
 
 .cartContentsContaineriPhone {
@@ -305,9 +308,11 @@
     margin-top: 0;
   }
 
-  .checkoutButtonBottom {
-    width: 90%;
-    margin: 1.75em 0 1em 0;
+  .stripeCheckout {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1.75em 0 2em 0;
 
   }
 
@@ -316,6 +321,7 @@
     font-size: 1em;
     font-weight: 700;
     letter-spacing: 0.037em;
+    padding-top: 0;
   }
 }
 
@@ -377,5 +383,13 @@
     font-size: 1em;
   }
 
+  .stripeCheckout {
+    width: 100%;
+    height: 5.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+  }
 
 }

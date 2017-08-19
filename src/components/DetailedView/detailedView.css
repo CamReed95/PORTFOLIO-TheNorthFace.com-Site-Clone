@@ -151,6 +151,13 @@
 /*IPAD VIEW*/
 @media(min-width: 700px){
 
+
+  .mobileViewContent {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .detailProductInfo h1 {
     font-size: 2em;
   }
@@ -199,6 +206,7 @@
   .addToCartButton {
     height: 6em;
     width: 95%;
+    margin: 4em auto;
   }
 
   .addToCartButton h2 {
@@ -355,8 +363,9 @@
     align-items: center;
     height: 4em;
     width: 53%;
-    margin-top: 1em;
-    margin-left: 1em;
+    margin: 1em 0 0 1em;
+    /*margin-top: 1em;
+    margin-left: 1em;*/
     background-color: red;
   }
 

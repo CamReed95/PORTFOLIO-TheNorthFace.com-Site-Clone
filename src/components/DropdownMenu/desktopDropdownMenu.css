@@ -9,6 +9,7 @@
     background-color: white;
     top: 100%;
     left: -51.5%;
+    z-index: 100;
   }
 
   .desktopDropdownLinksContainer {
@@ -17,7 +18,6 @@
     display: flex;
     justify-content: space-around;
     padding: 1em 6em;
-    /*background-color: salmon;*/
   }
 
   .categoryLinks h2 {

@@ -2,9 +2,26 @@ import React, { Component } from 'react';
 import './cart.css';
 import IndividualCartItem from './../IndividualCartItem/IndividualCartItem';
 import { Link } from 'react-router-dom';
+import StripeCheckout from 'react-stripe-checkout';
+import axios from 'axios';
 import { connect } from 'react-redux';
 
+
 class Cart extends Component {
+  constructor(props){
+    super(props);
+      this.state = {
+        totalCharge: (this.props.totalCartCost + (this.props.totalCartCost * 0.0685)) * 100
+      }
+
+  }
+
+  onToken(token){
+    token.card = void 0;
+    axios.post('http://localhost:3001/api/payment', { token, amount: this.state.totalCharge / 100 }).then(response => {
+      alert('Transaction Successful')
+    });
+  }
 
   render(){
 
@@ -47,8 +64,13 @@ class Cart extends Component {
                   <p>${this.props.totalCartCost ? this.props.totalCartCost : 0 }.00</p>
               </div>
             </div>
-            <div className="checkoutButtonMain">
-              <h1>SECURE CHECKOUT</h1>
+            <div className="stripeCheckoutiPhoneTop">
+              <StripeCheckout
+                description={ "TNF Clone Demonstration" }
+                token={ this.onToken.bind(this) }
+                stripeKey={ process.env.REACT_APP_PUB_KEY }
+                amount={ this.state.totalCharge }
+              />
             </div>
             <div className="continueShoppingiPhone">
             <Link to="/"><p>CONTINUE SHOPPING</p></Link>
@@ -78,8 +100,13 @@ class Cart extends Component {
                       <p>${this.props.totalCartCost ? this.props.totalCartCost : 0 }.00</p>
                   </div>
                 </div>
-                <div className="checkoutButtonMain">
-                  <h1>SECURE CHECKOUT</h1>
+                <div className="stripeCheckout">
+                  <StripeCheckout
+                    description={ "TNF Clone Demonstration" }
+                    token={ this.onToken.bind(this) }
+                    stripeKey={ process.env.REACT_APP_PUB_KEY }
+                    amount={ this.state.totalCharge }
+                  />
                 </div>
               </div>
 
@@ -111,8 +138,17 @@ class Cart extends Component {
               </div>
             </div>
 
-              <div className="checkoutButtonMain checkoutButtonBottom">
-                <h1>SECURE CHECKOUT</h1>
+            {console.log("Grand Total is ", checkoutGrandTotal.toFixed(2))}
+
+
+
+              <div className="stripeCheckout">
+                <StripeCheckout
+                  description={ "TNF Clone Demonstration" }
+                  token={ this.onToken.bind(this) }
+                  stripeKey={ process.env.REACT_APP_PUB_KEY }
+                  amount={ this.state.totalCharge }
+                />
               </div>
               <Link to="/"><p className="continueShopping">CONTINUE SHOPPING</p></Link>
           </div>

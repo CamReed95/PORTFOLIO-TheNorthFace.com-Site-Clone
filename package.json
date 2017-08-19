@@ -17,8 +17,10 @@
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.10",
     "react-select": "^1.0.0-rc.5",
+    "react-stripe-checkout": "^2.6.3",
     "redux": "^3.7.2",
-    "redux-persist": "^4.8.3"
+    "redux-persist": "^4.8.3",
+    "stripe": "^4.24.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,7 +30,7 @@
     "now-start": "node server/server.js",
     "deploy": "now --public --dotenv=.env.prod -d"
   },
-  "now":{
-    "alias":"thenorthfacebydave"
+  "now": {
+    "alias": "thenorthfacebydave"
   }
 }

@@ -90,7 +90,9 @@
   min-height: 45vh;
   min-width: 95%;
   margin-left: 5%;
-  background-image: url(./iphone-homepage-transformer.gif);
+  /*background-image: url('https://image.ibb.co/dcHJcF/iphone_homepage_transformer_f4cc99fe.gif');*/
+  background-image: url('http://www.girllovesglam.com/wp-content/uploads/2017/08/iphone-homepage-transformer.f4cc99fe.gif');
+
   background-size: 100% 100%;
 }
 
@@ -186,7 +188,8 @@
     margin-left: 4%;
     margin-right: auto;
     min-height: 34vh;
-    background-image: url(./homepage-transformer.gif);
+    /*background-image: url('https://image.ibb.co/fgW0ra/homepage_transformer.gif');*/
+    background-image: url('http://www.girllovesglam.com/wp-content/uploads/2017/08/homepage-transformer.gif');
   }
 
   .bottomSectionContainer {
@@ -247,7 +250,6 @@
   .trContent {
     min-width: 75%;
     margin: 0;
-    background-image: url(./homepage-transformer.gif);
   }
 
   .bottomSectionContainer {

@@ -30,6 +30,7 @@ class Cart extends Component {
 
     return (
       <div className="cartComponentContainer">
+
         <div className="cartCountHeader">
           {!itemsQty ? <p>0 ITEMS</p> : itemsQty === 1 ? <p>1 ITEM</p> : <p>{itemsQty} ITEMS</p>}
           <h2 className="inCartText">SHOPPING CART</h2>

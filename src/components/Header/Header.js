@@ -27,9 +27,6 @@ toggleMenu() {
 
   render() {
 
-
-    let itemAddedStyle = this.state.display;
-
     let qtyCount = 0;
 
     this.props.cart.forEach(  product => {

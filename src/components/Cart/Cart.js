@@ -16,7 +16,7 @@ class Cart extends Component {
   onToken(token){
     console.log(token);
     token.card = void 0;
-    axios.post('/api/payment', { token, amount: (this.props.totalCartCost * 1.0685 * 100).toFixed(2) / 100 }).then(response => {
+    axios.post('/api/payment', { token, amount: (this.props.totalCartCost * 1.07 * 100).toFixed(2) / 100 }).then(response => {
       alert('Transaction Successful')
     }).catch( (err)=> console.log(err))
   }
@@ -40,7 +40,7 @@ class Cart extends Component {
       )
     })
 
-    let estTax = this.props.totalCartCost * 0.0685
+    let estTax = this.props.totalCartCost * 0.07
 
     let checkoutGrandTotal = this.props.totalCartCost + estTax;
 
@@ -68,7 +68,7 @@ class Cart extends Component {
                 description={ "TNF Clone Demonstration" }
                 token={ this.onToken.bind(this) }
                 stripeKey={ process.env.REACT_APP_PUB_KEY }
-                amount={ (this.props.totalCartCost * 1.0685 * 100).toFixed(2) }
+                amount={ (this.props.totalCartCost * 1.07 * 100).toFixed(2) }
               />
             </div>
             <div className="continueShoppingiPhone">
@@ -104,7 +104,7 @@ class Cart extends Component {
                     description={ "TNF Clone Demonstration" }
                     token={ this.onToken.bind(this) }
                     stripeKey={ process.env.REACT_APP_PUB_KEY }
-                    amount={ (this.props.totalCartCost * 1.0685 * 100).toFixed(2) }
+                    amount={ (this.props.totalCartCost * 1.07 * 100).toFixed(2) }
                   />
                 </div>
               </div>
@@ -144,7 +144,7 @@ class Cart extends Component {
                   description={ "TNF Clone Demonstration" }
                   token={ this.onToken.bind(this) }
                   stripeKey={ process.env.REACT_APP_PUB_KEY }
-                  amount={ (this.props.totalCartCost * 1.0685 * 100).toFixed(2) }
+                  amount={ (this.props.totalCartCost * 1.07 * 100).toFixed(2) }
                 />
               </div>
               <Link to="/"><p className="continueShopping">CONTINUE SHOPPING</p></Link>

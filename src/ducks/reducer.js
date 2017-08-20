@@ -70,7 +70,6 @@ export default function reducer (state = initialState, action){
       return total + parseInt(nextVal.totalPriceByQty, 10);
     }, 0)
 
-
       return Object.assign( {}, state, {cart: checkedCart, totalCartCost: grandTotal} )
 
     case PERSIST_REHYDRATE:

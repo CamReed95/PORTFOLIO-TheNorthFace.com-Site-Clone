@@ -135,10 +135,6 @@ logQtyChange(event){
                     <h1 className="removeItemLink">REMOVE</h1>
                   </div>
 
-                  {console.log("Item price is", this.props.item.price)}
-
-                  {console.log("TotalQty Price is", this.props.item.totalPriceByQty)}
-
                 </div>
               </div>
 

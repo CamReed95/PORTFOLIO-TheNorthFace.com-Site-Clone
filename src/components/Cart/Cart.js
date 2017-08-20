@@ -10,21 +10,19 @@ import { connect } from 'react-redux';
 class Cart extends Component {
   constructor(props){
     super(props);
-      this.state = {
-        totalCharge: (this.props.totalCartCost + (this.props.totalCartCost * 0.0685)) * 100
-      }
 
   }
 
   onToken(token){
     console.log(token);
     token.card = void 0;
-    axios.post('/api/payment', { token, amount: this.state.totalCharge / 100 }).then(response => {
+    axios.post('/api/payment', { token, amount: (this.props.totalCartCost * 1.0685 * 100).toFixed(2) / 100 }).then(response => {
       alert('Transaction Successful')
     }).catch( (err)=> console.log(err))
   }
 
   render(){
+
 
     let cartItems = this.props.cart.map( (item, index, arr)=> {
       return (
@@ -70,7 +68,7 @@ class Cart extends Component {
                 description={ "TNF Clone Demonstration" }
                 token={ this.onToken.bind(this) }
                 stripeKey={ process.env.REACT_APP_PUB_KEY }
-                amount={ this.state.totalCharge }
+                amount={ (this.props.totalCartCost * 1.0685 * 100).toFixed(2) }
               />
             </div>
             <div className="continueShoppingiPhone">
@@ -106,7 +104,7 @@ class Cart extends Component {
                     description={ "TNF Clone Demonstration" }
                     token={ this.onToken.bind(this) }
                     stripeKey={ process.env.REACT_APP_PUB_KEY }
-                    amount={ this.state.totalCharge }
+                    amount={ (this.props.totalCartCost * 1.0685 * 100).toFixed(2) }
                   />
                 </div>
               </div>
@@ -139,8 +137,6 @@ class Cart extends Component {
               </div>
             </div>
 
-            {console.log("Grand Total is ", checkoutGrandTotal.toFixed(2))}
-
 
 
               <div className="stripeCheckout">
@@ -148,7 +144,7 @@ class Cart extends Component {
                   description={ "TNF Clone Demonstration" }
                   token={ this.onToken.bind(this) }
                   stripeKey={ process.env.REACT_APP_PUB_KEY }
-                  amount={ this.state.totalCharge }
+                  amount={ (this.props.totalCartCost * 1.0685 * 100).toFixed(2) }
                 />
               </div>
               <Link to="/"><p className="continueShopping">CONTINUE SHOPPING</p></Link>

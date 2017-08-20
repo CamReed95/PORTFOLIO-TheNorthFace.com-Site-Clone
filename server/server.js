@@ -27,6 +27,7 @@ app.get('/items/:gender/:category', pc.getCategoryByGender)
 app.get('/item/product/:product_id', pc.getProductById)
 app.post('/api/payment', function(req, res, next){
   //convert amount to pennies
+  console.log("Begining payment");
   const amountArray = req.body.amount.toString().split('');
   const pennies = [];
   for (var i = 0; i < amountArray.length; i++) {
@@ -47,14 +48,17 @@ app.post('/api/payment', function(req, res, next){
     }
   }
   const convertedAmt = parseInt(pennies.join(''));
-
+console.log("amt", convertedAmt);
 const charge = stripe.charges.create({
 amount: convertedAmt, // amount in cents, again
 currency: 'usd',
 source: req.body.token.id,
 description: 'Test charge from react app'
 }, function(err, charge) {
-  if (err) return res.sendStatus(500)
+  if (err) {
+    console.error(err);
+    return res.sendStatus(500)
+  }
   return res.sendStatus(200);
 // if (err && err.type === 'StripeCardError') {
 //   // The card has been declined

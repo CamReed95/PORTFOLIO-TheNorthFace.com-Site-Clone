@@ -17,6 +17,7 @@ class Cart extends Component {
   }
 
   onToken(token){
+    console.log(token);
     token.card = void 0;
     axios.post('/api/payment', { token, amount: this.state.totalCharge / 100 }).then(response => {
       alert('Transaction Successful')

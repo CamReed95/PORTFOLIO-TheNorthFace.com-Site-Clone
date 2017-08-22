@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getLimitedProducts } from './../../services/axiosServices';
 import IndividualProduct from './../IndividualProduct/IndividualProduct';
+import { Link } from 'react-router-dom';
 import './../../styles/limitCategories.css';
 import './backpacks.css';
 
@@ -50,7 +51,7 @@ export default class Backpacks extends Component {
           <div className="limitCategoryContainer">
             <div className="limitBreadcrumb">
               <h1>{"MEN'S"} BACKPACKS</h1>
-              <h2>VIEW ALL ({this.state.mensBackpacks.length * 2})<span className="rightArrow"> > </span> </h2>
+              <h2><Link to="/shop/mens/backpacks">VIEW ALL ({this.state.mensBackpacks.length * 2})<span className="rightArrow"> > </span> </Link></h2>
             </div>
             <div className="limitProductsDisplay">
               {mensBackpacksLimit}
@@ -60,7 +61,7 @@ export default class Backpacks extends Component {
           <div className="limitCategoryContainer">
             <div className="limitBreadcrumb">
               <h1>{"WOMEN'S"} BACKPACKS</h1>
-              <h2>VIEW ALL ({this.state.womensBackpacks.length * 2})<span className="rightArrow"> > </span> </h2>
+              <h2><Link to="/shop/womens/backpacks">VIEW ALL ({this.state.womensBackpacks.length * 2})<span className="rightArrow"> > </span></Link> </h2>
             </div>
             <div className="limitProductsDisplay">
               {womensBackpacksLimit}

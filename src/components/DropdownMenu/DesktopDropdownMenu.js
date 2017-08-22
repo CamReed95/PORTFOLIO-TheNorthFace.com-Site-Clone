@@ -9,6 +9,8 @@ export default class DesktopDropdownMenu extends Component {
     let dropdownDisplay = { display: 'none' }
 
     return (
+
+
       <div className="mainDesktopDropdownMenu" style={ this.props.dropdownActive ? dropdownDisplay : null} onMouseEnter={this.props.onMouseEnter} onMouseLeave={this.props.onMouseLeave}>
         <div className="desktopDropdownLinksContainer">
 
@@ -36,10 +38,14 @@ export default class DesktopDropdownMenu extends Component {
             <p className="dropdownLinks" onClick={this.props.toggleMenu}><Link to="/shop/womens/backpacks">{"WOMEN'S"}</Link></p>
           </section>
         </div>
+
+
         <div className="freeReturns">
         <p>FREE 3-DAY SHIPPING & FREE RETURNS</p>
         </div>
-      </div>
+
+        </div>
+    
     )
   }
 }

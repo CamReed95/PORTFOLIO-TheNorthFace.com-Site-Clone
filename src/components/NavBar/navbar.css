@@ -103,7 +103,6 @@
   .navBarDesktop {
     display: flex;
     width: 100%;
-    /*background-color: plum;*/
   }
 
   .topNav {
@@ -117,7 +116,6 @@
     left: -.5vh;
     top: 8vh;
     z-index: 90;
-    /*border: 2px solid red;*/
     background-color: transparent;
 
   }
@@ -129,7 +127,6 @@
     left: 8.75vh;
     top: 8vh;
     z-index: 90;
-    /*border: 2px solid lime;*/
     background-color: transparent;
   }
 
@@ -140,7 +137,6 @@
     left: 20vh;
     top: 8vh;
     z-index: 90;
-    /*border: 2px solid orange;*/
     background-color: transparent;
   }
 

@@ -40,12 +40,12 @@ export default class DesktopDropdownMenu extends Component {
         </div>
 
 
-        <div className="freeReturns">
+        <div className="freeReturns dropdownFreeReturns">
         <p>FREE 3-DAY SHIPPING & FREE RETURNS</p>
         </div>
 
         </div>
-    
+
     )
   }
 }

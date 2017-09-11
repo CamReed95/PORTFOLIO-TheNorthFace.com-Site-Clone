@@ -6,12 +6,8 @@ TheNorthFaceByDave is an e-commerce site clone of https://www.thenorthface.com. 
 
 MAJOR TECHNOLOGIES
 
-  • React with Redux
-  • JavaScript (ES6)
-  • CSS3 with Flexbox and Media Queries
-  • RESTful API requests
-  • NodeJS
-  • Express
-  • Massive
-  • PostgreSQL
-  • Stripe
+  <ul>
+    <li>React with Redux</li>
+    <li>JavaScript (ES6)</li>
+
+  </ul>

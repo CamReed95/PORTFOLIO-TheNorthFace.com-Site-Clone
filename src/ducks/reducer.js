@@ -46,6 +46,7 @@ export default function reducer (state = initialState, action){
     grandTotal = checkedCart.reduce((total, nextVal) => {
       return total + parseInt(nextVal.totalPriceByQty, 10);
     }, 0)
+
       return Object.assign({}, state, {cart: [...checkedCart], totalCartCost: grandTotal} )
 
     case REMOVE_FROM_CART:
